@@ -99,7 +99,7 @@ export default function Avaliacoes() {
             <div className="rating-number font-heading">4.7</div>
             <div className="rating-stars">
               <div className="stars-row">
-                {[1,2,3,4].map(i => <span key={i} className="star">★</span>)}
+                {[1, 2, 3, 4].map(i => <span key={i} className="star">★</span>)}
                 <span className="star" style={{ opacity: 0.75 }}>★</span>
               </div>
               <div className="rating-label">Baseado em +22.000 avaliações no Google</div>
