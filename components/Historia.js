@@ -58,7 +58,7 @@ export default function Historia() {
             <div className="historia-img-wrapper">
               <div className="historia-img-container">
                 <img
-                  src="/banner-nossa-historia.jpg"
+                  src="/banner-interno.jpg"
                   alt="Ambiente interno do Tor Sushi Oficial – aconchegante e climatizado"
                 />
                 <div className="historia-img-overlay" />

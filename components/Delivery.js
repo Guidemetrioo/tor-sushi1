@@ -16,42 +16,9 @@ export default function Delivery() {
           </p>
         </div>
 
-        {/* Cards */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', maxWidth: '700px', margin: '0 auto' }}>
-
-          {/* iFood */}
-          <div className="reveal reveal-delay-1">
-            <a
-              href="https://www.ifood.com.br/delivery/sao-paulo-sp/tor-sushi-jurubatuba/d6b2e14a-aea9-4fbb-8b8a-7ecaed1e6532"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="delivery-card"
-              id="delivery-ifood"
-            >
-              <div className="icon-circle" style={{ background: 'rgba(234, 29, 44, 0.1)', border: '1px solid rgba(234,29,44,0.2)' }}>
-                <svg width="32" height="32" fill="#ea1d2c" viewBox="0 0 24 24">
-                  <path d="M8.428 1.67c-4.65 0-7.184 4.149-7.184 6.998 0 2.294 2.2 3.299 4.25 3.299l-.006-.006c4.244 0 7.184-3.854 7.184-6.998 0-2.29-2.175-3.293-4.244-3.293zm11.328 0c-4.65 0-7.184 4.149-7.184 6.998 0 2.294 2.2 3.299 4.25 3.299l-.006-.006C21.061 11.96 24 8.107 24 4.963c0-2.29-2.18-3.293-4.244-3.293zM14.172 14.52l2.435 1.834c-2.17 2.07-6.124 3.525-9.353 3.17A8.913 8.913 0 01.23 14.541H0a9.598 9.598 0 008.828 7.758c3.814.24 7.323-.905 9.947-3.13l-.004.007 1.08 2.988 1.555-7.623-7.234-.02Z"/>
-                </svg>
-              </div>
-              <h3 style={{ color: 'white' }}>Pedir no iFood</h3>
-              <p>Entrega rápida e segura direto pelo app do iFood.</p>
-              <div style={{
-                marginTop: '1.25rem',
-                padding: '0.5rem 1.5rem',
-                border: '1px solid rgba(234,29,44,0.4)',
-                fontSize: '0.7rem',
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase',
-                color: '#ea1d2c',
-                transition: 'all 0.3s ease'
-              }}>
-                Pedir Agora →
-              </div>
-            </a>
-          </div>
-
-          {/* WhatsApp */}
-          <div className="reveal reveal-delay-2">
+        {/* Cards — apenas WhatsApp */}
+        <div style={{ display: 'flex', justifyContent: 'center', maxWidth: '400px', margin: '0 auto' }}>
+          <div className="reveal reveal-delay-1" style={{ width: '100%' }}>
             <a
               href="https://wa.me/5511919439685?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20delivery%20no%20Tor%20Sushi%20Oficial."
               target="_blank"

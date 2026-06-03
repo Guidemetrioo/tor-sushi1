@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const rodizioData = [
   {
@@ -14,6 +14,12 @@ const rodizioData = [
       { label: 'Seg. à Sexta-feira', value: 'R$ 79,90 / pessoa' },
       { label: 'Sáb., Dom. e Feriado', value: 'R$ 124,90 / pessoa' },
     ],
+    backItems: [
+      'Peças quentes e frias à vontade',
+      'Camarão empanado incluso',
+      'Disponível de Seg. a Sex. no almoço',
+      'Ótimo custo-benefício',
+    ],
   },
   {
     id: 'premium',
@@ -27,6 +33,12 @@ const rodizioData = [
       { label: 'Almoço Sáb, Dom e Feriado', value: 'R$ 124,90 / pessoa' },
       { label: 'Jantar (todos os dias)', value: 'R$ 124,90 / pessoa' },
     ],
+    backItems: [
+      'Frutos do mar à vontade',
+      'Sobremesa inclusa',
+      'Disponível todos os dias',
+      'Maior variedade de peças',
+    ],
   },
   {
     id: 'casal',
@@ -39,6 +51,12 @@ const rodizioData = [
       { label: 'Jantar Seg–Qui', value: 'R$ 189,90 / casal' },
       { label: 'Jantar Sex, Sáb, Dom e Feriado + Almoço fim de semana', value: 'R$ 197,90 / casal' },
     ],
+    backItems: [
+      'Frutos do mar à vontade',
+      'Sobremesa inclusa',
+      'Experiência exclusiva para dois',
+      'Disponível no jantar e fim de semana',
+    ],
   },
 ];
 
@@ -50,7 +68,7 @@ const menuCategories = [
       { name: 'Sashimi de Salmão', desc: 'Filé de salmão norueguês cortado finamente', img: '/gallery-sashimi.png' },
       { name: 'Sashimi de Atum', desc: 'Filé de atum rojo premium', img: 'https://images.unsplash.com/photo-1534482421-64566f976cfa?w=400&h=300&fit=crop&q=80' },
       { name: 'Sashimi de Pargo', desc: 'Peixe branco delicado e suave', img: 'https://images.unsplash.com/photo-1559410545-0bdcd187e0a6?w=400&h=300&fit=crop&q=80' },
-      { name: 'Sashimi de Polvo', desc: 'Tentáculos tenros com wasabi', img: 'https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=400&h=300&fit=crop&q=80' },
+      { name: 'Sashimi de Polvo', desc: 'Tentáculos tenros com wasabi', img: 'https://images.unsplash.com/photo-1617196034738-26c5f7c977ce?w=400&h=300&fit=crop&q=80' },
     ],
   },
   {
@@ -105,7 +123,112 @@ const menuCategories = [
   },
 ];
 
-// Lotus watermark SVG as decorative element
+// ── Flip Card ────────────────────────────────────────────────────────────────
+function FlipCard({ rod }) {
+  const [flipped, setFlipped] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.matchMedia('(hover: none)').matches);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
+  const handleClick = () => {
+    if (isMobile) setFlipped(f => !f);
+  };
+
+  const whatsappUrl =
+    'https://wa.me/5511919439685?text=Olá!%20Gostaria%20de%20reservar%20uma%20mesa%20para%20o%20Rodízio%20no%20Tor%20Sushi%20Oficial.';
+
+  return (
+    <div
+      ref={cardRef}
+      className={`flip-container ${rod.featured ? 'featured-flip' : ''}`}
+      onClick={handleClick}
+      style={{ cursor: isMobile ? 'pointer' : 'default' }}
+    >
+      <div className={`flip-inner ${isMobile && flipped ? 'flipped' : ''}`}>
+
+        {/* ── FRENTE ── */}
+        <div className={`flip-front rodizio-card ${rod.featured ? 'featured' : ''}`}>
+          {rod.badge && <div className="rodizio-badge">{rod.badge}</div>}
+          <div style={{
+            width: '40px',
+            height: '1px',
+            background: rod.featured ? 'var(--color-red)' : 'var(--color-border)',
+            marginBottom: '1.25rem'
+          }} />
+          <h3 className="rodizio-card-name font-heading">{rod.name}</h3>
+          <p className="rodizio-card-desc">{rod.desc}</p>
+          <div className="rodizio-prices">
+            {rod.prices.map((price, i) => (
+              <div
+                key={i}
+                className="rodizio-price-row"
+                style={price.value === '' ? {
+                  justifyContent: 'center',
+                  borderBottom: 'none',
+                  fontWeight: 'bold',
+                  letterSpacing: '0.12em',
+                  color: 'var(--color-text-primary)',
+                  paddingTop: '0.75rem',
+                  paddingBottom: '0.25rem'
+                } : {}}
+              >
+                <span className="rodizio-price-label">{price.label}</span>
+                {price.value && <span className="rodizio-price-value">{price.value}</span>}
+              </div>
+            ))}
+          </div>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+            style={{ width: '100%', justifyContent: 'center', marginTop: 'auto' }}
+            id={`rodizio-reservar-${rod.id}`}
+            onClick={e => e.stopPropagation()}
+          >
+            Reservar Agora
+          </a>
+        </div>
+
+        {/* ── VERSO ── */}
+        <div className={`flip-back ${rod.featured ? 'flip-back-featured' : ''}`}>
+          <div className="flip-back-inner">
+            <div className="flip-back-icon">🍣</div>
+            <h4 className="flip-back-title font-heading">O que está incluso</h4>
+            <p className="flip-back-subtitle">{rod.name}</p>
+            <ul className="flip-back-list">
+              {rod.backItems.map((item, i) => (
+                <li key={i} className="flip-back-item">
+                  <span className="flip-check">✔</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-flip-back"
+              onClick={e => e.stopPropagation()}
+              id={`rodizio-back-reservar-${rod.id}`}
+            >
+              Reservar Agora
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+}
+
+// ── Lotus watermark ──────────────────────────────────────────────────────────
 function LotusWatermark() {
   return (
     <div style={{
@@ -128,9 +251,9 @@ function LotusWatermark() {
   );
 }
 
+// ── Main Component ───────────────────────────────────────────────────────────
 export default function Rodizio() {
   const [activeMenu, setActiveMenu] = useState('sashimi');
-
   const currentMenu = menuCategories.find(c => c.id === activeMenu);
 
   return (
@@ -149,38 +272,11 @@ export default function Rodizio() {
           </p>
         </div>
 
-        {/* Rodízio Cards — todos visíveis simultaneamente */}
+        {/* Rodízio Flip Cards */}
         <div className="rodizio-grid reveal" style={{ position: 'relative' }}>
+          <LotusWatermark />
           {rodizioData.map((rod) => (
-            <div key={rod.id} className={`rodizio-card ${rod.featured ? 'featured' : ''}`}>
-              {rod.badge && <div className="rodizio-badge">{rod.badge}</div>}
-              <div style={{
-                width: '40px',
-                height: '1px',
-                background: rod.featured ? 'var(--color-red)' : 'var(--color-border)',
-                marginBottom: '1.25rem'
-              }} />
-              <h3 className="rodizio-card-name font-heading">{rod.name}</h3>
-              <p className="rodizio-card-desc">{rod.desc}</p>
-              <div className="rodizio-prices">
-                {rod.prices.map((price, i) => (
-                  <div key={i} className="rodizio-price-row" style={price.value === '' ? { justifyContent: 'center', borderBottom: 'none', fontWeight: 'bold', letterSpacing: '0.12em', color: 'var(--color-text-primary)', paddingTop: '0.75rem', paddingBottom: '0.25rem' } : {}}>
-                    <span className="rodizio-price-label">{price.label}</span>
-                    {price.value && <span className="rodizio-price-value">{price.value}</span>}
-                  </div>
-                ))}
-              </div>
-              <a
-                href="https://wa.me/5511919439685?text=Olá!%20Gostaria%20de%20reservar%20uma%20mesa%20para%20o%20Rodízio%20no%20Tor%20Sushi%20Oficial."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-                style={{ width: '100%', justifyContent: 'center' }}
-                id={`rodizio-reservar-${rod.id}`}
-              >
-                Reservar Agora
-              </a>
-            </div>
+            <FlipCard key={rod.id} rod={rod} />
           ))}
         </div>
 
