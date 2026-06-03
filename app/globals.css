@@ -2933,3 +2933,151 @@ a.gallery-item {
 a.gallery-item:hover .gallery-overlay {
   opacity: 1;
 }
+
+/* ============================================================
+   MOBILE RESPONSIVENESS OVERRIDES (DESIGN SQUAD SYSTEM)
+   ============================================================ */
+@media (max-width: 767px) {
+  /* 1. Section Padding */
+  .section-padding,
+  .menu-section,
+  .historia-section,
+  .galeria-section,
+  .reviews-section,
+  .reserva-section,
+  .localizacao-section,
+  .blog-preview-section {
+    padding: 3.5rem 0 !important;
+  }
+  .delivery-section {
+    padding: 3rem 0 !important;
+  }
+  .section-header {
+    margin-bottom: 2rem !important;
+  }
+
+  /* 2. Hero Section */
+  .hero-section {
+    height: 90vh !important;
+    min-height: 550px !important;
+    max-height: 800px !important;
+    padding-bottom: 3.5rem !important;
+  }
+  .hero-bg {
+    background-position: center center !important;
+  }
+  .hero-title {
+    font-size: 2.2rem !important;
+    line-height: 1.2 !important;
+  }
+  .hero-subtitle {
+    font-size: 0.85rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+  .hero-buttons {
+    gap: 0.6rem !important;
+  }
+  .hero-badges {
+    margin-top: 1.25rem !important;
+    gap: 0.35rem !important;
+  }
+  .hero-badge {
+    padding: 0.3rem 0.65rem !important;
+    font-size: 0.65rem !important;
+  }
+
+  /* 3. Central Banner (Nossa História) */
+  .historia-grid {
+    gap: 2rem !important;
+  }
+  .historia-img-container {
+    height: 280px !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+  }
+  .historia-stats {
+    gap: 1.5rem !important;
+    margin-top: 1.5rem !important;
+    justify-content: space-between !important;
+  }
+  .historia-stat-value {
+    font-size: 1.75rem !important;
+  }
+
+  /* 4. Stats Grid Borders (2x2 bordered grid) */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .stat-item {
+    border-right: none !important;
+    border-bottom: 1px solid var(--color-border) !important;
+    padding: 1.25rem 0.5rem !important;
+  }
+  .stat-item:nth-child(odd) {
+    border-right: 1px solid var(--color-border) !important;
+  }
+  .stat-item:nth-child(3),
+  .stat-item:nth-child(4) {
+    border-bottom: none !important;
+  }
+
+  /* 5. Rodízio Flip Cards */
+  .flip-container,
+  .flip-container.featured-flip {
+    height: 470px !important;
+  }
+  .flip-front,
+  .flip-back {
+    padding: 1.5rem !important;
+  }
+  .rodizio-card-desc {
+    margin-bottom: 1rem !important;
+    font-size: 0.75rem !important;
+  }
+  .flip-back-list {
+    gap: 0.4rem !important;
+  }
+  .flip-back-item {
+    font-size: 0.8rem !important;
+  }
+  .flip-back-title {
+    font-size: 1rem !important;
+  }
+  .flip-back-icon {
+    font-size: 2rem !important;
+  }
+
+  /* 6. Gallery Grid (2 columns on mobile) */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-auto-rows: 120px !important;
+    gap: 4px !important;
+  }
+  .gallery-item.wide {
+    grid-column: span 2 !important;
+  }
+  .gallery-item.square {
+    grid-column: span 1 !important;
+  }
+
+  /* 7. Review Cards */
+  .review-card {
+    padding: 1.25rem !important;
+  }
+  .review-text {
+    font-size: 0.8rem !important;
+    line-height: 1.6 !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra tweaks for small mobile viewports */
+  .historia-img-container {
+    height: 220px !important;
+  }
+  .hero-title {
+    font-size: 1.85rem !important;
+  }
+}

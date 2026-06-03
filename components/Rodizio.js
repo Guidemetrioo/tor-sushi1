@@ -126,18 +126,10 @@ const menuCategories = [
 // ── Flip Card ────────────────────────────────────────────────────────────────
 function FlipCard({ rod }) {
   const [flipped, setFlipped] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const cardRef = useRef(null);
 
-  useEffect(() => {
-    const check = () => setIsMobile(window.matchMedia('(hover: none)').matches);
-    check();
-    window.addEventListener('resize', check);
-    return () => window.removeEventListener('resize', check);
-  }, []);
-
   const handleClick = () => {
-    if (isMobile) setFlipped(f => !f);
+    setFlipped(f => !f);
   };
 
   const whatsappUrl =
@@ -148,9 +140,9 @@ function FlipCard({ rod }) {
       ref={cardRef}
       className={`flip-container ${rod.featured ? 'featured-flip' : ''}`}
       onClick={handleClick}
-      style={{ cursor: isMobile ? 'pointer' : 'default' }}
+      style={{ cursor: 'pointer' }}
     >
-      <div className={`flip-inner ${isMobile && flipped ? 'flipped' : ''}`}>
+      <div className={`flip-inner ${flipped ? 'flipped' : ''}`}>
 
         {/* ── FRENTE ── */}
         <div className={`flip-front rodizio-card ${rod.featured ? 'featured' : ''}`}>
