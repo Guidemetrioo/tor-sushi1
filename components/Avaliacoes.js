@@ -133,6 +133,10 @@ export default function Avaliacoes() {
                     <div className="review-author-date">Cliente Google · {review.date}</div>
                   </div>
                 </div>
+                <div className="review-divider-mobile" />
+                <div className="review-source-mobile">
+                  Baseado em mais de 22.000 avaliações no Google
+                </div>
               </div>
             ))}
           </div>

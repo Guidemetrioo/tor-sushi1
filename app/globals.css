@@ -3035,6 +3035,21 @@ a.gallery-item:hover .gallery-overlay {
   .flip-back {
     padding: 1.5rem !important;
   }
+  .flip-back,
+  .flip-back.flip-back-featured {
+    background: #1A2744 !important;
+    color: #FFFFFF !important;
+    border: none !important;
+  }
+  .flip-back-title {
+    color: #FFFFFF !important;
+  }
+  .flip-back-subtitle {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+  .flip-back-item {
+    color: #FFFFFF !important;
+  }
   .rodizio-card-desc {
     margin-bottom: 1rem !important;
     font-size: 0.75rem !important;
@@ -3063,19 +3078,93 @@ a.gallery-item:hover .gallery-overlay {
     grid-column: span 1 !important;
     height: 150px !important;
   }
+  .gallery-item:nth-child(n+7) {
+    display: none !important;
+  }
   .gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
     border-radius: 4px !important;
   }
 
   /* 7. Review Cards */
   .review-card {
     padding: 1.25rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .review-quote {
+    display: none !important;
+  }
+  .review-stars {
+    order: 1 !important;
+    margin-bottom: 0.5rem !important;
+    justify-content: center !important;
   }
   .review-text {
+    order: 2 !important;
     font-size: 0.8rem !important;
     line-height: 1.6 !important;
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
+    text-align: center !important;
+  }
+  .review-author {
+    order: 3 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    margin-top: 0.5rem !important;
+  }
+  .review-author-name {
+    text-align: center !important;
+  }
+  .review-author-date {
+    text-align: center !important;
+  }
+  .review-divider-mobile {
+    display: block !important;
+    order: 4 !important;
+    width: 60px !important;
+    height: 1px !important;
+    background: var(--color-border) !important;
+    margin: 1rem auto !important;
+  }
+  .review-source-mobile {
+    display: block !important;
+    order: 5 !important;
+    font-size: 0.72rem !important;
+    color: var(--color-text-secondary) !important;
+    text-align: center !important;
+  }
+  .rating-display {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .rating-stars {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .stars-row {
+    justify-content: center !important;
+  }
+  .rating-label {
+    text-align: center !important;
+    margin-top: 0.25rem !important;
+  }
+  .copyright-desktop {
+    display: none !important;
+  }
+  .copyright-mobile {
+    display: block !important;
   }
 
   /* Nossa História mobile overrides */
@@ -3090,29 +3179,61 @@ a.gallery-item:hover .gallery-overlay {
   .historia-payment-badges {
     display: none !important;
   }
+  .historia-img-badge {
+    max-width: 70% !important;
+    padding: 8px 14px !important;
+    bottom: 16px !important;
+    left: 16px !important;
+  }
+  .historia-info-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .historia-info-col h2,
+  .historia-info-col .section-tag,
+  .historia-info-col p {
+    text-align: center !important;
+  }
+  .historia-info-col .gold-line {
+    margin: 0 auto 1.5rem !important;
+  }
+  .historia-stats {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 1.5rem !important;
+    margin-top: 1.5rem !important;
+    width: 100% !important;
+  }
+  .historia-stats > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
 
   /* Reserva mobile overrides */
   .btn-expand-reserva {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    max-width: 300px;
+    width: auto !important;
     margin: 0 auto 2rem !important;
-    padding: 0.875rem 2rem !important;
-    background: linear-gradient(135deg, var(--color-red-bright), var(--color-red)) !important;
+    padding: 14px 32px !important;
+    background: #E8503A !important;
     color: #fff !important;
-    font-size: 0.85rem !important;
-    text-transform: uppercase;
+    font-size: 0.9rem !important;
     font-weight: 600 !important;
-    letter-spacing: 0.5px !important;
-    border: 1px solid transparent !important;
-    border-radius: 4px !important;
+    border: none !important;
+    border-radius: 8px !important;
     cursor: pointer;
     min-height: 48px !important;
   }
 
-  .reserva-collapsible {
+  .form-container {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
@@ -3120,9 +3241,24 @@ a.gallery-item:hover .gallery-overlay {
     width: 100%;
   }
 
-  .reserva-collapsible.expanded {
+  .form-container.open {
     max-height: 1200px !important;
     opacity: 1 !important;
+  }
+  .menu-reservar-highlight {
+    display: block !important;
+    background-color: #E8503A !important;
+    color: #FFFFFF !important;
+    text-align: center;
+    border-radius: 8px !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    padding: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.1em !important;
+    border-bottom: none !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 }
 
@@ -3149,10 +3285,12 @@ a.gallery-item:hover .gallery-overlay {
 .btn-expand-reserva {
   display: none;
 }
-.reserva-collapsible {
-  max-height: none;
-  opacity: 1;
-  overflow: visible;
+@media (min-width: 769px) {
+  .form-container {
+    max-height: none;
+    opacity: 1;
+    overflow: visible;
+  }
 }
 .flip-micro-label-mobile {
   display: none;
@@ -3175,17 +3313,11 @@ a.gallery-item:hover .gallery-overlay {
 }
 
 .menu-reservar-highlight {
-  background-color: #E8503A !important;
-  color: #FFFFFF !important;
-  text-align: center;
-  border-radius: 8px;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  padding: 14px 1rem !important;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  border-bottom: none !important;
+  display: none !important;
 }
-.menu-reservar-highlight:hover {
-  background-color: #d13f2b !important;
+
+.review-divider-mobile,
+.review-source-mobile,
+.copyright-mobile {
+  display: none;
 }

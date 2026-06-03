@@ -140,7 +140,7 @@ export default function Reserva() {
             </button>
 
             <form onSubmit={handleSubmit} className="form-fields" id="reserva-form">
-              <div className={`reserva-collapsible ${isFormExpanded ? 'expanded' : ''}`}>
+              <div className={`form-container ${isFormExpanded ? 'open' : ''}`}>
 
               {/* Nome */}
               <div className="form-group">

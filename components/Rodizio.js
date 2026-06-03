@@ -248,7 +248,7 @@ function FlipCard({ rod, index }) {
 
       </div>
       <div className="flip-micro-label-mobile">
-        Toque para ver o que está incluso
+        👆 Toque para ver o que está incluso
       </div>
     </div>
   );
