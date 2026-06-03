@@ -2964,6 +2964,7 @@ a.gallery-item:hover .gallery-overlay {
     padding-bottom: 3.5rem !important;
   }
   .hero-bg {
+    background-image: url("/mobile-banner.webp") !important;
     background-position: center center !important;
   }
   .hero-title {
