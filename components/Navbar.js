@@ -93,6 +93,16 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div className={`mobile-overlay ${menuOpen ? 'visible' : ''}`} onClick={() => setMenuOpen(false)} />
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
+        <a
+          href="https://wa.me/5511919439685?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Tor%20Sushi%20Oficial."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mobile-menu-link menu-reservar-highlight"
+          onClick={() => setMenuOpen(false)}
+          id="mobile-reservar-mesa"
+        >
+          Reservar Mesa
+        </a>
         {navLinks.map((link) =>
           link.anchor ? (
             <a

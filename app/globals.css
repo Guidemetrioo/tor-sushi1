@@ -2937,7 +2937,7 @@ a.gallery-item:hover .gallery-overlay {
 /* ============================================================
    MOBILE RESPONSIVENESS OVERRIDES (DESIGN SQUAD SYSTEM)
    ============================================================ */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   /* 1. Section Padding */
   .section-padding,
   .menu-section,
@@ -2964,7 +2964,7 @@ a.gallery-item:hover .gallery-overlay {
     padding-bottom: 3.5rem !important;
   }
   .hero-bg {
-    background-image: url("/mobile-banner.webp") !important;
+    background-image: url("/images/BANNERMOBILE1.jpg") !important;
     background-position: center center !important;
   }
   .hero-title {
@@ -3005,27 +3005,31 @@ a.gallery-item:hover .gallery-overlay {
     font-size: 1.75rem !important;
   }
 
-  /* 4. Stats Grid Borders (2x2 bordered grid) */
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-  .stat-item {
-    border-right: none !important;
-    border-bottom: 1px solid var(--color-border) !important;
-    padding: 1.25rem 0.5rem !important;
-  }
-  .stat-item:nth-child(odd) {
-    border-right: 1px solid var(--color-border) !important;
-  }
-  .stat-item:nth-child(3),
-  .stat-item:nth-child(4) {
-    border-bottom: none !important;
+  /* 4. Stats Bar */
+  .stats-bar {
+    display: none !important;
   }
 
   /* 5. Rodízio Flip Cards */
   .flip-container,
   .flip-container.featured-flip {
+    height: 495px !important;
+  }
+  .flip-inner {
     height: 470px !important;
+  }
+  .flip-inner.animate-hint {
+    animation: flipHintAggressive 2.8s ease-in-out, shadowPulse 2.8s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  .flip-micro-label-mobile {
+    display: block !important;
+    text-align: center;
+    font-size: 0.72rem;
+    color: var(--color-text-secondary);
+    margin-top: 0.5rem;
+    font-weight: 500;
+    font-style: italic;
   }
   .flip-front,
   .flip-back {
@@ -3051,14 +3055,16 @@ a.gallery-item:hover .gallery-overlay {
   /* 6. Gallery Grid (2 columns on mobile) */
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    grid-auto-rows: 120px !important;
+    grid-auto-rows: 150px !important;
     gap: 4px !important;
+    grid-auto-flow: dense !important;
   }
-  .gallery-item.wide {
-    grid-column: span 2 !important;
-  }
-  .gallery-item.square {
+  .gallery-item {
     grid-column: span 1 !important;
+    height: 150px !important;
+  }
+  .gallery-item img {
+    border-radius: 4px !important;
   }
 
   /* 7. Review Cards */
@@ -3071,6 +3077,53 @@ a.gallery-item:hover .gallery-overlay {
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
   }
+
+  /* Nossa História mobile overrides */
+  .historia-image-mobile-wrapper {
+    display: block !important;
+    width: 100% !important;
+    margin: 1.5rem 0 !important;
+  }
+  .historia-image-desktop-col {
+    display: none !important;
+  }
+  .historia-payment-badges {
+    display: none !important;
+  }
+
+  /* Reserva mobile overrides */
+  .btn-expand-reserva {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 2rem !important;
+    padding: 0.875rem 2rem !important;
+    background: linear-gradient(135deg, var(--color-red-bright), var(--color-red)) !important;
+    color: #fff !important;
+    font-size: 0.85rem !important;
+    text-transform: uppercase;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    border: 1px solid transparent !important;
+    border-radius: 4px !important;
+    cursor: pointer;
+    min-height: 48px !important;
+  }
+
+  .reserva-collapsible {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease, opacity 0.45s ease;
+    width: 100%;
+  }
+
+  .reserva-collapsible.expanded {
+    max-height: 1200px !important;
+    opacity: 1 !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -3081,4 +3134,58 @@ a.gallery-item:hover .gallery-overlay {
   .hero-title {
     font-size: 1.85rem !important;
   }
+}
+
+/* Global defaults & helper classes for mobile-exclusive features */
+.historia-image-mobile-wrapper {
+  display: none;
+}
+.historia-image-desktop-col {
+  display: block;
+}
+.historia-payment-badges {
+  display: block;
+}
+.btn-expand-reserva {
+  display: none;
+}
+.reserva-collapsible {
+  max-height: none;
+  opacity: 1;
+  overflow: visible;
+}
+.flip-micro-label-mobile {
+  display: none;
+}
+
+@keyframes flipHintAggressive {
+  0%   { transform: rotateY(0deg); }
+  15%  { transform: rotateY(35deg); }
+  30%  { transform: rotateY(0deg); }
+  45%  { transform: rotateY(40deg); }
+  60%  { transform: rotateY(5deg); }
+  75%  { transform: rotateY(35deg); }
+  90%  { transform: rotateY(0deg); }
+  100% { transform: rotateY(0deg); }
+}
+
+@keyframes shadowPulse {
+  0%, 100% { box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+  50% { box-shadow: 0 8px 35px rgba(0,0,0,0.35); }
+}
+
+.menu-reservar-highlight {
+  background-color: #E8503A !important;
+  color: #FFFFFF !important;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 14px 1rem !important;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border-bottom: none !important;
+}
+.menu-reservar-highlight:hover {
+  background-color: #d13f2b !important;
 }

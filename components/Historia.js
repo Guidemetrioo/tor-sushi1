@@ -6,14 +6,31 @@ export default function Historia() {
       <div className="container-max">
         <div className="historia-grid">
 
-          {/* Text */}
-          <div className="reveal-left">
+          {/* Text & Mobile Layout Column */}
+          <div className="reveal-left historia-info-col">
             <div className="gold-line" style={{ marginBottom: '1.5rem' }} />
             <span className="section-tag" style={{ textAlign: 'left', display: 'block', marginBottom: '0.75rem' }}>Nossa História</span>
             <h2 className="section-title font-heading" style={{ textAlign: 'left' }}>
               Cada peça conta uma história.{' '}
               <span className="gold-gradient">A sua começa aqui.</span>
             </h2>
+
+            {/* Mobile-only Image (sits between Title and description text) */}
+            <div className="historia-image-mobile-wrapper">
+              <div className="historia-img-container" style={{ position: 'relative', overflow: 'hidden', height: '280px', borderRadius: 'var(--radius-lg)' }}>
+                <img
+                  src="/banner-interno.jpg"
+                  alt="Ambiente interno do Tor Sushi Oficial – aconchegante e climatizado"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+                <div className="historia-img-overlay" />
+                <div className="historia-img-badge">
+                  <p className="font-heading">Ambiente Premium</p>
+                  <p>Santo Amaro, SP</p>
+                </div>
+              </div>
+            </div>
+
             <p style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)', lineHeight: 1.8, marginBottom: '1rem' }}>
               O Tor Sushi Oficial nasceu do amor pela culinária japonesa e do desejo de oferecer uma experiência gastronômica completa e acessível para os moradores de Santo Amaro e toda a Zona Sul de São Paulo.
             </p>
@@ -40,8 +57,8 @@ export default function Historia() {
               </div>
             </div>
 
-            {/* Vale Refeição badges */}
-            <div style={{ marginTop: '2rem' }}>
+            {/* Vale Refeição badges (hidden on mobile via .historia-payment-badges) */}
+            <div className="historia-payment-badges" style={{ marginTop: '2rem' }}>
               <p style={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--color-teal)', marginBottom: '0.75rem' }}>
                 Formas de Pagamento
               </p>
@@ -53,8 +70,8 @@ export default function Historia() {
             </div>
           </div>
 
-          {/* Image */}
-          <div className="reveal-right">
+          {/* Desktop-only Image Column */}
+          <div className="reveal-right historia-image-desktop-col">
             <div className="historia-img-wrapper">
               <div className="historia-img-container">
                 <img

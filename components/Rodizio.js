@@ -17,8 +17,9 @@ const rodizioData = [
     backItems: [
       'Peças quentes e frias à vontade',
       'Camarão empanado incluso',
-      'Disponível de Seg. a Sex. no almoço',
-      'Ótimo custo-benefício',
+      'Disponível Seg. a Sex. no almoço',
+      'Melhor custo-benefício do cardápio',
+      'Ideal para o dia a dia',
     ],
   },
   {
@@ -37,7 +38,8 @@ const rodizioData = [
       'Frutos do mar à vontade',
       'Sobremesa inclusa',
       'Disponível todos os dias',
-      'Maior variedade de peças',
+      'Maior variedade de peças do cardápio',
+      'A experiência completa do Tor Sushi',
     ],
   },
   {
@@ -46,7 +48,7 @@ const rodizioData = [
     name: 'Rodízio Casal',
     desc: 'À vontade com frutos do mar e sobremesa inclusa. Perfeito para um jantar a dois.',
     featured: false,
-    badge: '🌹 Romântico',
+    badge: 'Romântico',
     prices: [
       { label: 'Jantar Seg–Qui', value: 'R$ 189,90 / casal' },
       { label: 'Jantar Sex, Sáb, Dom e Feriado + Almoço fim de semana', value: 'R$ 197,90 / casal' },
@@ -56,6 +58,7 @@ const rodizioData = [
       'Sobremesa inclusa',
       'Experiência exclusiva para dois',
       'Disponível no jantar e fim de semana',
+      'Perfeito para ocasiões especiais',
     ],
   },
 ];
@@ -124,9 +127,27 @@ const menuCategories = [
 ];
 
 // ── Flip Card ────────────────────────────────────────────────────────────────
-function FlipCard({ rod }) {
+function FlipCard({ rod, index }) {
   const [flipped, setFlipped] = useState(false);
+  const [isIntersecting, setIsIntersecting] = useState(false);
   const cardRef = useRef(null);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsIntersecting(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
 
   const handleClick = () => {
     setFlipped(f => !f);
@@ -142,7 +163,10 @@ function FlipCard({ rod }) {
       onClick={handleClick}
       style={{ cursor: 'pointer' }}
     >
-      <div className={`flip-inner ${flipped ? 'flipped' : ''}`}>
+      <div 
+        className={`flip-inner ${flipped ? 'flipped' : ''} ${isIntersecting ? 'animate-hint' : ''}`}
+        style={{ animationDelay: `${0.3 + index * 0.5}s` }}
+      >
 
         {/* ── FRENTE ── */}
         <div className={`flip-front rodizio-card ${rod.featured ? 'featured' : ''}`}>
@@ -191,7 +215,14 @@ function FlipCard({ rod }) {
         {/* ── VERSO ── */}
         <div className={`flip-back ${rod.featured ? 'flip-back-featured' : ''}`}>
           <div className="flip-back-inner">
-            <div className="flip-back-icon">🍣</div>
+            <div className="flip-back-icon">
+              <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ margin: '0 auto 0.5rem' }}>
+                <ellipse cx="12" cy="7" rx="8" ry="4" />
+                <path d="M4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7" />
+                <ellipse cx="12" cy="7" rx="4" ry="2" fill="currentColor" opacity="0.15" />
+                <ellipse cx="12" cy="7" rx="2" ry="1" />
+              </svg>
+            </div>
             <h4 className="flip-back-title font-heading">O que está incluso</h4>
             <p className="flip-back-subtitle">{rod.name}</p>
             <ul className="flip-back-list">
@@ -215,6 +246,9 @@ function FlipCard({ rod }) {
           </div>
         </div>
 
+      </div>
+      <div className="flip-micro-label-mobile">
+        Toque para ver o que está incluso
       </div>
     </div>
   );
@@ -267,8 +301,8 @@ export default function Rodizio() {
         {/* Rodízio Flip Cards */}
         <div className="rodizio-grid reveal" style={{ position: 'relative' }}>
           <LotusWatermark />
-          {rodizioData.map((rod) => (
-            <FlipCard key={rod.id} rod={rod} />
+          {rodizioData.map((rod, index) => (
+            <FlipCard key={rod.id} rod={rod} index={index} />
           ))}
         </div>
 

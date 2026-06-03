@@ -59,15 +59,12 @@ export default function Hero() {
             <span>4.7 Google</span>
           </div>
           <div className="hero-badge">
-            <span className="badge-icon">👥</span>
             <span>+22.000 avaliações</span>
           </div>
           <div className="hero-badge">
-            <span className="badge-icon">💳</span>
             <span>Aceita Vale Refeição</span>
           </div>
           <div className="hero-badge">
-            <span className="badge-icon">🍤</span>
             <span>Frutos do Mar Incluso</span>
           </div>
         </div>

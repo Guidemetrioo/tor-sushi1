@@ -164,7 +164,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="footer-bottom">
           <p>© {currentYear} <span>Tor Sushi Oficial</span>. Todos os direitos reservados.</p>
-          <p>Feito com ❤️ para a <span>Zona Sul</span> de São Paulo</p>
+          <p>Feito para a <span>Zona Sul</span> de São Paulo</p>
         </div>
       </div>
     </footer>
