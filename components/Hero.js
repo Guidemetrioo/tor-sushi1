@@ -18,7 +18,7 @@ export default function Hero() {
         <p className="hero-tag">Santo Amaro, São Paulo</p>
 
         <h1 className="hero-title font-heading">
-          O rodízio japonês que{' '}
+          O rodízio japonês que<br />
           <span className="gold-gradient">conquistou a Zona Sul</span>
         </h1>
 
@@ -41,7 +41,7 @@ export default function Hero() {
             Reservar Mesa
           </a>
           <button
-            className="btn-primary"
+            className="btn-secondary"
             id="hero-ver-rodizio"
             onClick={() => scrollToSection('rodizio')}
           >

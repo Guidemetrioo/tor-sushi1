@@ -8,7 +8,7 @@ const reviews = [
     date: 'há 2 semanas',
     text: 'Sem dúvida o melhor rodízio japonês da Zona Sul! O ambiente é lindo, climatizado e super confortável. O sashimi de salmão é de dar água na boca, e os frutos do mar estão sempre fresquíssimos. Voltarei sempre!',
     stars: 5,
-    gradient: 'linear-gradient(135deg, #133837, #215E5D)',
+    gradient: 'linear-gradient(135deg, #2BA8A0, #1A8A84)',
   },
   {
     initials: 'RP',
@@ -16,7 +16,7 @@ const reviews = [
     date: 'há 1 mês',
     text: 'Fui no aniversário da minha esposa e foi incrível. O atendimento foi impecável, a variedade de pratos é absurda. O hot roll gratinado e o temaki de salmão foram os destaques. Nota 10!',
     stars: 5,
-    gradient: 'linear-gradient(135deg, #215E5D, #2A8783)',
+    gradient: 'linear-gradient(135deg, #C9A96E, #A8845A)',
   },
   {
     initials: 'CS',
@@ -24,7 +24,7 @@ const reviews = [
     date: 'há 3 semanas',
     text: 'Vim com a família e todos adoraram! A sobremesa inclusa no rodízio foi uma surpresa deliciosa. Aceitam vale refeição, o que facilita muito. Ambiente familiar e aconchegante. Recomendo de olhos fechados!',
     stars: 5,
-    gradient: 'linear-gradient(135deg, #2A8783, #206B68)',
+    gradient: 'linear-gradient(135deg, #1A1510, #0D0D0D)',
   },
   {
     initials: 'TL',
@@ -32,7 +32,7 @@ const reviews = [
     date: 'há 2 meses',
     text: 'O rodízio premium vale cada centavo! A qualidade dos ingredientes é impressionante. Os camarões empanados são uma entrada incrível. Ambiente tranquilo e elegante. Um dos meus restaurantes favoritos em SP.',
     stars: 5,
-    gradient: 'linear-gradient(135deg, #133837, #206B68)',
+    gradient: 'linear-gradient(135deg, #2BA8A0, #1A8A84)',
   },
   {
     initials: 'FL',
@@ -40,7 +40,7 @@ const reviews = [
     date: 'há 1 semana',
     text: 'O ambiente é lindo, todo em madeira, muito aconchegante. Fui no jantar de casal e foi inesquecível.',
     stars: 5,
-    gradient: 'linear-gradient(135deg, #133837, #2A8783)',
+    gradient: 'linear-gradient(135deg, #C9A96E, #A8845A)',
   },
   {
     initials: 'LM',
@@ -48,7 +48,7 @@ const reviews = [
     date: 'há 3 dias',
     text: 'Melhor custo-benefício da Zona Sul. Salmão sempre fresco e atendimento impecável.',
     stars: 5,
-    gradient: 'linear-gradient(135deg, #215E5D, #2A8783)',
+    gradient: 'linear-gradient(135deg, #1A1510, #0D0D0D)',
   },
   {
     initials: 'PO',
@@ -56,7 +56,7 @@ const reviews = [
     date: 'há 4 dias',
     text: 'Fui com a família toda e todo mundo amou. Variedade enorme de pratos e sobremesa inclusa!',
     stars: 5,
-    gradient: 'linear-gradient(135deg, #133837, #215E5D)',
+    gradient: 'linear-gradient(135deg, #2BA8A0, #1A8A84)',
   },
   {
     initials: 'RA',
@@ -64,7 +64,7 @@ const reviews = [
     date: 'há 1 semana',
     text: 'Aceita vale refeição e ainda assim entrega uma qualidade absurda. Virei cliente fiel.',
     stars: 5,
-    gradient: 'linear-gradient(135deg, #2A8783, #206B68)',
+    gradient: 'linear-gradient(135deg, #C9A96E, #A8845A)',
   },
 ];
 

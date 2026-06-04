@@ -1,7 +1,10 @@
 import './globals.css';
+import './themes.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
+import ColorSelector from '@/components/ColorSelector';
+import CustomCursor from '@/components/CustomCursor';
 
 export const metadata = {
   title: 'Tor Sushi Oficial | Rodízio Japonês em Santo Amaro, São Paulo',
@@ -33,7 +36,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&family=Noto+Serif+JP:wght@300;400&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&family=Noto+Serif+JP:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
           rel="stylesheet"
         />
         <script
@@ -84,6 +87,8 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <WhatsAppFloat />
+        <ColorSelector />
+        <CustomCursor />
       </body>
     </html>
   );

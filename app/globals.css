@@ -4,36 +4,34 @@
    DESIGN TOKENS
    ============================================================ */
 :root {
-  --color-bg-primary: #F9F9F7;
-  --color-bg-secondary: #F9F9F7;
-  --color-bg-tertiary: #FFFFFF;
-  --color-text-primary: #133837;
-  --color-text-secondary: #334155;
-  --color-text-muted: #64748B;
-  --color-gold: #133837;
-  --color-gold-light: #215E5D;
-  --color-gold-dark: #091F1E;
-  --color-teal: #133837;
-  --color-teal-hover: #091F1E;
-  --color-teal-light: #215E5D;
-  --color-teal-dark: #091F1E;
-  --color-wood-mid: #F9F9F7;
-  --color-wood-light: #FFFFFF;
-  --color-red: #2A8783;
-  --color-red-hover: #206B68;
-  --color-red-bright: #33A39F;
-  --color-border: rgba(19, 56, 55, 0.12);
-  --color-border-gold: rgba(42, 135, 131, 0.25);
-  --color-border-subtle: rgba(19, 56, 55, 0.06);
-
-
+  --color-bg-primary: #0A0A0A;
+  --color-bg-secondary: #1A1510;
+  --color-bg-tertiary: #111111;
+  --color-text-primary: #F5F0E8;
+  --color-text-secondary: #A09880;
+  --color-text-muted: #8E8670;
+  --color-gold: #C9A96E;
+  --color-gold-light: #E8D5B0;
+  --color-gold-dark: #A8845A;
+  --color-teal: #2BA8A0;
+  --color-teal-hover: #1A8A84;
+  --color-teal-light: #45D1C9;
+  --color-teal-dark: #125E59;
+  --color-wood-mid: #1A1510;
+  --color-wood-light: #111111;
+  --color-red: #2BA8A0;
+  --color-red-hover: #1A8A84;
+  --color-red-bright: #45D1C9;
+  --color-border: rgba(201, 169, 110, 0.2);
+  --color-border-gold: rgba(201, 169, 110, 0.3);
+  --color-border-subtle: rgba(201, 169, 110, 0.1);
 
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Montserrat', sans-serif;
 
-  --radius-sm: 2px;
-  --radius-md: 6px;
-  --radius-lg: 12px;
+  --radius-sm: 4px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
 
   --transition-fast: 0.2s ease;
   --transition-base: 0.3s ease;
@@ -364,13 +362,15 @@ button {
 }
 
 .navbar.scrolled {
-  background: #FFFFFF;
-  color: #133837;
-  --color-text-secondary: #133837;
-  --color-gold: #2A8783;
-  --color-border: rgba(19, 56, 55, 0.12);
-  border-bottom: 1px solid rgba(19, 56, 55, 0.08);
-  box-shadow: 0 4px 20px rgba(19, 56, 55, 0.08);
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: #F5F0E8;
+  --color-text-secondary: #F5F0E8;
+  --color-gold: #2BA8A0;
+  --color-border: rgba(201, 169, 110, 0.2);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   padding: 8px 24px;
 }
 
@@ -3223,7 +3223,7 @@ a.gallery-item:hover .gallery-overlay {
     width: auto !important;
     margin: 0 auto 2rem !important;
     padding: 14px 32px !important;
-    background: #E8503A !important;
+    background: #2BA8A0 !important;
     color: #fff !important;
     font-size: 0.9rem !important;
     font-weight: 600 !important;
@@ -3247,7 +3247,7 @@ a.gallery-item:hover .gallery-overlay {
   }
   .menu-reservar-highlight {
     display: block !important;
-    background-color: #E8503A !important;
+    background-color: #2BA8A0 !important;
     color: #FFFFFF !important;
     text-align: center;
     border-radius: 8px !important;
@@ -3312,8 +3312,10 @@ a.gallery-item:hover .gallery-overlay {
   50% { box-shadow: 0 8px 35px rgba(0,0,0,0.35); }
 }
 
-.menu-reservar-highlight {
-  display: none !important;
+@media (min-width: 769px) {
+  .menu-reservar-highlight {
+    display: none !important;
+  }
 }
 
 .review-divider-mobile,
@@ -3321,3 +3323,421 @@ a.gallery-item:hover .gallery-overlay {
 .copyright-mobile {
   display: none;
 }
+
+/* ============================================================
+   PREMIUM DARK LUXURY REDESIGN OVERRIDES
+   ============================================================ */
+
+/* 1. Reset / Global typography & desktop custom cursor override */
+@media (min-width: 1024px) {
+  body, a, button, input, select, textarea, [role="button"], .gallery-item, .flip-container, .menu-tab {
+    cursor: none !important;
+  }
+}
+
+h1, h2, h3, .font-heading {
+  font-weight: 800 !important;
+  letter-spacing: -1px !important;
+}
+
+.section-tag, .hero-tag {
+  text-transform: uppercase !important;
+  letter-spacing: 4px !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  color: var(--color-teal) !important;
+}
+
+p, .review-text, .section-subtitle, .rodizio-card-desc, .menu-item-desc {
+  font-weight: 300 !important;
+  line-height: 1.8 !important;
+  color: var(--color-text-secondary) !important;
+}
+
+/* Teal 2px decorative line below centered section titles */
+.section-header .section-title::after, .reviews-header .section-title::after {
+  content: '' !important;
+  display: block !important;
+  width: 60px !important;
+  height: 2px !important;
+  background: #2BA8A0 !important;
+  margin: 0.75rem auto 0 !important;
+}
+
+/* 2. Alternating Section Backgrounds */
+#inicio { background: var(--color-bg-primary) !important; }
+#delivery { background: var(--color-bg-secondary) !important; }
+#rodizio { background: var(--color-bg-primary) !important; }
+#historia { background: var(--color-bg-secondary) !important; }
+#galeria { background: var(--color-bg-primary) !important; }
+#avaliacoes { background: var(--color-bg-secondary) !important; }
+#reserva { background: var(--color-bg-primary) !important; }
+#localizacao { background: var(--color-bg-secondary) !important; }
+
+/* 3. Section Separators */
+.section-padding, .menu-section {
+  position: relative;
+}
+.section-padding::after, .menu-section::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 80% !important;
+  height: 1px !important;
+  background: linear-gradient(to right, transparent, rgba(201, 169, 110, 0.3), transparent) !important;
+}
+
+/* 4. Scroll Reveal Curves */
+.reveal, .reveal-left, .reveal-right {
+  opacity: 0 !important;
+  transform: translateY(30px) !important;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.reveal-left {
+  transform: translateX(-30px) translateY(30px) !important;
+}
+.reveal-right {
+  transform: translateX(30px) translateY(30px) !important;
+}
+.reveal.revealed, .reveal-left.revealed, .reveal-right.revealed {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
+
+/* 5. Cards: luxury dark & glass gradients */
+.rodizio-card, .delivery-card, .menu-item-card, .blog-card {
+  background: linear-gradient(145deg, #1A1510, #0D0D0D) !important;
+  border: 1px solid rgba(201, 169, 110, 0.2) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 1px rgba(201,169,110,0.1) !important;
+  border-radius: 8px !important;
+  transition: all var(--transition-base) !important;
+}
+
+.rodizio-card:hover, .delivery-card:hover, .menu-item-card:hover, .blog-card:hover {
+  border-color: rgba(43, 168, 160, 0.5) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.8), 0 0 8px rgba(43, 168, 160, 0.2) !important;
+}
+
+/* Glass cards for reviews */
+.review-card {
+  background: rgba(255, 255, 255, 0.04) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(201, 169, 110, 0.2) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 1px rgba(201,169,110,0.1) !important;
+  border-radius: 8px !important;
+  transition: all var(--transition-base) !important;
+}
+
+.review-card:hover {
+  border-color: rgba(43, 168, 160, 0.5) !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.7), 0 0 8px rgba(43, 168, 160, 0.2) !important;
+}
+
+/* 6. Buttons Styling */
+.btn-primary {
+  background: #2BA8A0 !important;
+  color: #FFFFFF !important;
+  border-radius: 4px !important;
+  border: 1px solid transparent !important;
+  box-shadow: none !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px !important;
+  transition: all var(--transition-base) !important;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #2BA8A0, #1A8A84) !important;
+  box-shadow: 0 0 20px rgba(43, 168, 160, 0.3) !important;
+  transform: translateY(-1px) !important;
+}
+
+.btn-outline, .btn-secondary, .btn-gold {
+  border: 1px solid #C9A96E !important;
+  background: #1A1510 !important;
+  color: #C9A96E !important;
+  border-radius: 4px !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px !important;
+  transition: all var(--transition-base) !important;
+}
+
+.btn-outline:hover, .btn-secondary:hover, .btn-gold:hover {
+  background: linear-gradient(135deg, #2BA8A0, #1A8A84) !important;
+  border-color: transparent !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 20px rgba(43, 168, 160, 0.3) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Specific button styles */
+#hero-ver-rodizio {
+  border: 1px solid #C9A96E !important;
+  background: #1A1510 !important;
+  color: #C9A96E !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+
+#hero-ver-rodizio:hover {
+  background: linear-gradient(135deg, #2BA8A0, #1A8A84) !important;
+  border-color: transparent !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 20px rgba(43, 168, 160, 0.3) !important;
+}
+
+/* 7. Scrolled Navbar */
+.navbar.scrolled {
+  background: rgba(10, 10, 10, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  color: #F5F0E8 !important;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.1) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.navbar.scrolled .nav-link {
+  color: #F5F0E8 !important;
+}
+
+.navbar.scrolled .nav-link:hover {
+  color: #2BA8A0 !important;
+}
+
+/* 8. WhatsApp Floating Button Override */
+.whatsapp-float {
+  background: #2BA8A0 !important;
+  box-shadow: 0 4px 20px rgba(43, 168, 160, 0.4) !important;
+  animation: pulse 2.5s infinite !important;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0 8px 30px rgba(43, 168, 160, 0.6) !important;
+  animation: none !important;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(43, 168, 160, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(43, 168, 160, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(43, 168, 160, 0); }
+}
+
+/* 9. Star colors */
+.star, .review-star {
+  color: #C9A96E !important;
+}
+
+/* 10. Hero Radial Overlay & Badges */
+.hero-overlay {
+  background: radial-gradient(ellipse at center bottom, rgba(43,168,160,0.08) 0%, rgba(0,0,0,0.85) 100%) !important;
+}
+.hero-badge {
+  background: rgba(201, 169, 110, 0.15) !important;
+  border: 1px solid rgba(201, 169, 110, 0.3) !important;
+  color: #C9A96E !important;
+}
+
+/* Hero Entrance Animation */
+@keyframes heroTitleFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-title {
+  animation: heroTitleFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both !important;
+}
+
+/* 11. Galeria scale and overlay on hover */
+.gallery-item img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.gallery-item:hover img {
+  transform: scale(1.03) !important;
+}
+.gallery-overlay {
+  background: rgba(43, 168, 160, 0.15) !important;
+}
+
+/* 12. Blog category tags and "Ler Mais" / "Ler mais" button styling */
+.blog-card-category {
+  background: #2BA8A0 !important;
+}
+.blog-preview-link, .blog-card-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.5rem 1.25rem !important;
+  border: 1px solid #C9A96E !important;
+  color: #C9A96E !important;
+  background: transparent !important;
+  text-transform: uppercase !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 1px !important;
+  font-weight: 600 !important;
+  border-radius: 4px !important;
+  transition: all var(--transition-base) !important;
+  text-decoration: none !important;
+  margin-top: auto !important;
+  width: fit-content !important;
+}
+.blog-preview-link:hover, .blog-card-btn:hover {
+  background: linear-gradient(135deg, #2BA8A0, #1A8A84) !important;
+  border-color: transparent !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 15px rgba(43, 168, 160, 0.3) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* 13. Footer layout & brand glow */
+.footer {
+  background: #050505 !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+.footer img {
+  filter: brightness(1.05) drop-shadow(0 0 8px rgba(43, 168, 160, 0.25)) !important;
+}
+.footer::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 1px !important;
+  background: linear-gradient(to right, transparent, #C9A96E, transparent) !important;
+}
+
+/* 14. Historia section styles */
+.historia-section {
+  position: relative !important;
+  overflow: hidden !important;
+  background: #1A1510 !important;
+}
+.historia-section::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background-image: url("/banner-interno.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  opacity: 0.4 !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+.historia-section .container-max {
+  position: relative !important;
+  z-index: 1 !important;
+}
+.historia-section .gold-line {
+  background: #2BA8A0 !important;
+  height: 2px !important;
+  width: 48px !important;
+  margin: 0 auto 1.5rem !important;
+}
+.historia-section .section-tag {
+  text-align: center !important;
+  display: block !important;
+  margin-bottom: 0.75rem !important;
+}
+.historia-section .section-title {
+  text-align: center !important;
+  margin-bottom: 2rem !important;
+}
+.historia-section p, 
+.historia-section span, 
+.historia-section h2, 
+.historia-section h3,
+.historia-section .historia-stat-value,
+.historia-section .historia-stat-label {
+  color: #F5F0E8 !important;
+}
+.historia-section .gold-gradient {
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+  color: #F5F0E8 !important;
+}
+.historia-section .historia-image-desktop-col,
+.historia-section .historia-image-mobile-wrapper {
+  display: none !important;
+}
+.historia-section .historia-grid {
+  grid-template-columns: 1fr !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+}
+.historia-section .historia-info-col {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+.historia-section .historia-stats {
+  justify-content: center !important;
+  gap: 3rem !important;
+}
+
+/* 15. Rodizio / Flip Card Backside & Prices */
+.flip-back, .flip-back-featured {
+  background: #0F2F2E !important;
+  border: 1px solid rgba(43, 168, 160, 0.3) !important;
+}
+.rodizio-price-value {
+  color: #C9A96E !important;
+  font-weight: 800 !important;
+}
+.btn-flip-back {
+  background: #2BA8A0 !important;
+  color: #FFFFFF !important;
+  border-radius: 4px !important;
+  padding: 0.5rem 1rem !important;
+}
+
+/* 16. Light-section Card Background Override */
+.light-section .rodizio-card, 
+.light-section .delivery-card, 
+.light-section .menu-item-card, 
+.light-section .blog-preview-card,
+.light-section .blog-card {
+  background: linear-gradient(145deg, #1A1510, #0D0D0D) !important;
+  border: 1px solid rgba(201, 169, 110, 0.2) !important;
+}
+.light-section .rodizio-card.featured {
+  background: linear-gradient(145deg, #1A1510, #0D0D0D) !important;
+  border-color: rgba(43, 168, 160, 0.5) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6) !important;
+}
+.light-section .rodizio-card:hover, 
+.light-section .delivery-card:hover, 
+.light-section .menu-item-card:hover, 
+.light-section .blog-preview-card:hover {
+  border-color: rgba(43, 168, 160, 0.5) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8), 0 0 8px rgba(43, 168, 160, 0.2) !important;
+}
+
+/* 17. Reserva Info Frame */
+.reserva-info-frame {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  background: rgba(22, 22, 22, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all var(--transition-base);
+}
+
+
+
+
+

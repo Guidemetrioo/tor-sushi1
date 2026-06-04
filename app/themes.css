@@ -1,0 +1,1266 @@
+/* ============================================================
+   TEMAS VISUAIS COMPLETOS - TOR SUSHI (DARK BASELINE SYSTEM)
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   TEMA 1: CARBONO QUENTE (Default Reset)
+   ------------------------------------------------------------ */
+body.tema-carbono-quente {
+  --color-bg-primary: #0A0A0A;
+  --color-bg-secondary: #1A1510;
+  --color-bg-tertiary: #111111;
+  --color-text-primary: #F5F0E8;
+  --color-text-secondary: #A09880;
+  --color-text-muted: #8E8670;
+  --color-gold: #C9A96E;
+  --color-border: rgba(201, 169, 110, 0.2);
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+/* ------------------------------------------------------------
+   TEMA 2: JAPANDI PREMIUM (Zen Charcoal & Off-white)
+   ------------------------------------------------------------ */
+body.tema-japandi-premium {
+  background-color: #121515 !important;
+  color: #EDE8DF !important;
+  --color-bg-primary: #121515 !important;
+  --color-bg-secondary: #1A1D1D !important;
+  --color-bg-tertiary: #1F2222 !important;
+  --color-text-primary: #EDE8DF !important;
+  --color-text-secondary: #B0B5B5 !important;
+  --color-text-muted: #7E8585 !important;
+  --color-border: rgba(237, 232, 223, 0.15) !important;
+  --color-border-gold: rgba(232, 224, 212, 0.2) !important;
+  --color-border-subtle: rgba(237, 232, 223, 0.08) !important;
+  --font-heading: 'Cormorant Garamond', serif !important;
+  --font-body: 'Inter', sans-serif !important;
+  --radius-sm: 2px !important;
+  --radius-md: 2px !important;
+  --radius-lg: 2px !important;
+}
+
+/* Japandi Typography Overrides */
+body.tema-japandi-premium h1,
+body.tema-japandi-premium h2,
+body.tema-japandi-premium h3,
+body.tema-japandi-premium h4,
+body.tema-japandi-premium h5,
+body.tema-japandi-premium h6,
+body.tema-japandi-premium .font-heading,
+body.tema-japandi-premium .section-title {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 300 !important;
+  color: #EDE8DF !important;
+  text-transform: none !important;
+}
+body.tema-japandi-premium h1.hero-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem) !important;
+  line-height: 1.1 !important;
+}
+body.tema-japandi-premium .gold-gradient {
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  color: #EDE8DF !important;
+}
+body.tema-japandi-premium .section-tag,
+body.tema-japandi-premium .hero-tag {
+  text-transform: uppercase !important;
+  letter-spacing: 5px !important;
+  font-size: 11px !important;
+  color: #2BA8A0 !important;
+  font-weight: 600 !important;
+}
+body.tema-japandi-premium .section-title {
+  position: relative !important;
+  display: inline-block !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 2rem !important;
+}
+body.tema-japandi-premium .section-title::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 60px !important;
+  height: 1px !important;
+  background: #2BA8A0 !important;
+}
+
+/* Japandi Navbar overrides */
+body.tema-japandi-premium .navbar {
+  background: rgba(18, 21, 21, 0.85) !important;
+  border-bottom: 1px solid rgba(237, 232, 223, 0.1) !important;
+  color: #EDE8DF !important;
+}
+body.tema-japandi-premium .navbar.scrolled {
+  background: rgba(18, 21, 21, 0.95) !important;
+  border-bottom: 1px solid rgba(237, 232, 223, 0.15) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+body.tema-japandi-premium .nav-link {
+  color: #EDE8DF !important;
+}
+body.tema-japandi-premium .nav-link::after {
+  background: #EDE8DF !important;
+}
+body.tema-japandi-premium .nav-hamburger span {
+  background: #EDE8DF !important;
+}
+
+/* Japandi Mobile Menu override */
+body.tema-japandi-premium .mobile-menu {
+  background: rgba(18, 21, 21, 0.98) !important;
+  border-left: 1px solid rgba(237, 232, 223, 0.15) !important;
+}
+body.tema-japandi-premium .mobile-menu-link {
+  color: #EDE8DF !important;
+  border-bottom: 1px solid rgba(237, 232, 223, 0.08) !important;
+}
+body.tema-japandi-premium .mobile-menu-link:hover {
+  color: #2BA8A0 !important;
+}
+
+/* Japandi Cards */
+body.tema-japandi-premium .rodizio-card,
+body.tema-japandi-premium .delivery-card,
+body.tema-japandi-premium .menu-item-card,
+body.tema-japandi-premium .blog-preview-card,
+body.tema-japandi-premium .blog-card,
+body.tema-japandi-premium .light-section .rodizio-card,
+body.tema-japandi-premium .light-section .delivery-card,
+body.tema-japandi-premium .light-section .menu-item-card,
+body.tema-japandi-premium .light-section .blog-preview-card,
+body.tema-japandi-premium .light-section .blog-card {
+  background: #1A1D1D !important;
+  border: 1px solid rgba(237, 232, 223, 0.12) !important;
+  border-radius: 2px !important;
+  color: #EDE8DF !important;
+}
+body.tema-japandi-premium .rodizio-card.featured,
+body.tema-japandi-premium .light-section .rodizio-card.featured {
+  border: 1.5px solid #2BA8A0 !important;
+}
+body.tema-japandi-premium .rodizio-card:hover,
+body.tema-japandi-premium .delivery-card:hover,
+body.tema-japandi-premium .menu-item-card:hover,
+body.tema-japandi-premium .blog-preview-card:hover,
+body.tema-japandi-premium .light-section .rodizio-card:hover,
+body.tema-japandi-premium .light-section .delivery-card:hover,
+body.tema-japandi-premium .light-section .menu-item-card:hover,
+body.tema-japandi-premium .light-section .blog-preview-card:hover {
+  border-color: #2BA8A0 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+body.tema-japandi-premium .flip-back,
+body.tema-japandi-premium .flip-back-featured {
+  background: #1A1D1D !important;
+  border: 1px solid rgba(237, 232, 223, 0.15) !important;
+  color: #EDE8DF !important;
+  border-radius: 2px !important;
+}
+body.tema-japandi-premium .flip-back-title,
+body.tema-japandi-premium .flip-back-subtitle,
+body.tema-japandi-premium .flip-back-list,
+body.tema-japandi-premium .flip-back-item {
+  color: #EDE8DF !important;
+}
+
+/* Japandi Buttons (Background-colored) */
+body.tema-japandi-premium .btn-primary,
+body.tema-japandi-premium .btn-gold,
+body.tema-japandi-premium .btn-flip-back,
+body.tema-japandi-premium .btn-submit,
+body.tema-japandi-premium .blog-preview-link,
+body.tema-japandi-premium .blog-card-btn {
+  background: #EDE8DF !important;
+  color: #121515 !important;
+  border: 1px solid #EDE8DF !important;
+  border-radius: 2px !important;
+  box-shadow: none !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  font-weight: 600 !important;
+}
+body.tema-japandi-premium .btn-primary:hover,
+body.tema-japandi-premium .btn-gold:hover,
+body.tema-japandi-premium .btn-flip-back:hover,
+body.tema-japandi-premium .btn-submit:hover,
+body.tema-japandi-premium .blog-preview-link:hover,
+body.tema-japandi-premium .blog-card-btn:hover {
+  background: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}
+body.tema-japandi-premium .btn-secondary,
+body.tema-japandi-premium .btn-outline {
+  border: 1px solid rgba(237, 232, 223, 0.4) !important;
+  background: #1A1D1D !important;
+  color: #EDE8DF !important;
+  border-radius: 2px !important;
+  font-weight: 600 !important;
+}
+body.tema-japandi-premium .btn-secondary:hover,
+body.tema-japandi-premium .btn-outline:hover {
+  background: #EDE8DF !important;
+  color: #121515 !important;
+  border-color: #EDE8DF !important;
+}
+body.tema-japandi-premium .menu-reservar-highlight,
+body.tema-japandi-premium .btn-expand-reserva {
+  background: #EDE8DF !important;
+  color: #121515 !important;
+  border-radius: 2px !important;
+}
+body.tema-japandi-premium .menu-reservar-highlight:hover,
+body.tema-japandi-premium .btn-expand-reserva:hover {
+  background: #FFFFFF !important;
+  color: #121515 !important;
+}
+body.tema-japandi-premium .menu-tab {
+  background: rgba(237, 232, 223, 0.05) !important;
+  border: 1px solid rgba(237, 232, 223, 0.12) !important;
+  color: #B0B5B5 !important;
+  border-radius: 2px !important;
+}
+body.tema-japandi-premium .menu-tab.active {
+  background: #EDE8DF !important;
+  color: #121515 !important;
+  border-color: #EDE8DF !important;
+}
+
+/* Japandi Separators */
+body.tema-japandi-premium .gold-line,
+body.tema-japandi-premium .gold-line-full {
+  background: rgba(237, 232, 223, 0.2) !important;
+  height: 1px !important;
+  opacity: 0.5 !important;
+}
+
+/* Japandi Banners (Gold & Obsidian Overlay standard) */
+body.tema-japandi-premium .hero-bg {
+  opacity: 0.45 !important;
+  filter: none !important;
+}
+body.tema-japandi-premium .hero-overlay {
+  background: radial-gradient(ellipse at center bottom, rgba(232, 224, 212, 0.15) 0%, #121515 100%) !important;
+  display: block !important;
+}
+body.tema-japandi-premium .historia-section::before {
+  opacity: 0.45 !important;
+  filter: none !important;
+}
+body.tema-japandi-premium .historia-section {
+  background: #121515 !important;
+}
+body.tema-japandi-premium .historia-section p, 
+body.tema-japandi-premium .historia-section span, 
+body.tema-japandi-premium .historia-section h2, 
+body.tema-japandi-premium .historia-section h3,
+body.tema-japandi-premium .historia-section .historia-stat-value,
+body.tema-japandi-premium .historia-section .historia-stat-label {
+  color: #EDE8DF !important;
+}
+
+/* Japandi Reserva Info Frame */
+body.tema-japandi-premium .reserva-info-frame {
+  border: 1px solid rgba(237, 232, 223, 0.15) !important;
+  background: rgba(26, 30, 30, 0.75) !important;
+  border-radius: 2px !important;
+}
+
+/* Japandi Footer */
+body.tema-japandi-premium .footer {
+  background: #0B0C0C !important;
+  border-top: 1px solid rgba(237, 232, 223, 0.1) !important;
+}
+body.tema-japandi-premium .footer::before {
+  background: rgba(237, 232, 223, 0.2) !important;
+}
+body.tema-japandi-premium .footer p,
+body.tema-japandi-premium .footer span,
+body.tema-japandi-premium .footer h3,
+body.tema-japandi-premium .footer h4,
+body.tema-japandi-premium .footer a {
+  color: #B0B5B5 !important;
+}
+
+/* ------------------------------------------------------------
+   TEMA 3: BEGE EDITORIAL (Deep Coffee & Copper/Beige)
+   ------------------------------------------------------------ */
+body.tema-bege-editorial {
+  background-color: #16120E !important;
+  color: #E8D9C0 !important;
+  --color-bg-primary: #16120E !important;
+  --color-bg-secondary: #201A15 !important;
+  --color-bg-tertiary: #2A221B !important;
+  --color-text-primary: #E8D9C0 !important;
+  --color-text-secondary: #C4B7A5 !important;
+  --color-text-muted: #8F8375 !important;
+  --color-border: rgba(232, 217, 192, 0.18) !important;
+  --color-border-gold: rgba(212, 191, 160, 0.25) !important;
+  --color-border-subtle: rgba(232, 217, 192, 0.08) !important;
+  --font-heading: 'Playfair Display', serif !important;
+  --font-body: 'Inter', sans-serif !important;
+  --radius-sm: 8px !important;
+  --radius-md: 12px !important;
+  --radius-lg: 12px !important;
+}
+
+/* Bege Typography Overrides */
+body.tema-bege-editorial h1,
+body.tema-bege-editorial h2,
+body.tema-bege-editorial h3,
+body.tema-bege-editorial h4,
+body.tema-bege-editorial h5,
+body.tema-bege-editorial h6,
+body.tema-bege-editorial .font-heading,
+body.tema-bege-editorial .section-title {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+  color: #E8D9C0 !important;
+  text-transform: none !important;
+}
+body.tema-bege-editorial .gold-gradient {
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  color: #E8D9C0 !important;
+}
+body.tema-bege-editorial .section-tag,
+body.tema-bege-editorial .hero-tag,
+body.tema-bege-editorial .section-subtitle,
+body.tema-bege-editorial .hero-subtitle {
+  font-family: 'Playfair Display', serif !important;
+  font-style: italic !important;
+  color: #D4BFA0 !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+/* Bege Navbar overrides */
+body.tema-bege-editorial .navbar {
+  background: rgba(22, 18, 14, 0.85) !important;
+  border-bottom: 1px solid rgba(232, 217, 192, 0.1) !important;
+  color: #E8D9C0 !important;
+}
+body.tema-bege-editorial .navbar.scrolled {
+  background: rgba(22, 18, 14, 0.96) !important;
+  border-bottom: 1px solid rgba(232, 217, 192, 0.15) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+body.tema-bege-editorial .nav-link {
+  color: #E8D9C0 !important;
+}
+body.tema-bege-editorial .nav-link::after {
+  background: #E8D9C0 !important;
+}
+body.tema-bege-editorial .nav-hamburger span {
+  background: #E8D9C0 !important;
+}
+
+/* Bege Mobile Menu override */
+body.tema-bege-editorial .mobile-menu {
+  background: rgba(22, 18, 14, 0.98) !important;
+  border-left: 1px solid rgba(232, 217, 192, 0.15) !important;
+}
+body.tema-bege-editorial .mobile-menu-link {
+  color: #E8D9C0 !important;
+  border-bottom: 1px solid rgba(232, 217, 192, 0.08) !important;
+}
+body.tema-bege-editorial .mobile-menu-link:hover {
+  color: #D4BFA0 !important;
+}
+
+/* Bege Cards & Glassmorphism */
+body.tema-bege-editorial .rodizio-card,
+body.tema-bege-editorial .delivery-card,
+body.tema-bege-editorial .menu-item-card,
+body.tema-bege-editorial .blog-preview-card,
+body.tema-bege-editorial .blog-card,
+body.tema-bege-editorial .light-section .rodizio-card,
+body.tema-bege-editorial .light-section .delivery-card,
+body.tema-bege-editorial .light-section .menu-item-card,
+body.tema-bege-editorial .light-section .blog-preview-card,
+body.tema-bege-editorial .light-section .blog-card {
+  background: rgba(32, 26, 21, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(232, 217, 192, 0.15) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+  color: #E8D9C0 !important;
+}
+body.tema-bege-editorial .flip-back,
+body.tema-bege-editorial .flip-back-featured {
+  background: #201A15 !important;
+  border: 1px solid rgba(232, 217, 192, 0.2) !important;
+  border-radius: 12px !important;
+}
+body.tema-bege-editorial .flip-back-title,
+body.tema-bege-editorial .flip-back-subtitle,
+body.tema-bege-editorial .flip-back-list,
+body.tema-bege-editorial .flip-back-item {
+  color: #E8D9C0 !important;
+}
+
+/* Accent: Left Border teal on Testimonials */
+body.tema-bege-editorial .review-card,
+body.tema-bege-editorial .avaliacao-card {
+  border-left: 4px solid #2BA8A0 !important;
+}
+
+/* Bege Prices */
+body.tema-bege-editorial .rodizio-price-value,
+body.tema-bege-editorial .price-tag,
+body.tema-bege-editorial .rodizio-price-row span {
+  color: #D4BFA0 !important;
+  font-weight: 700 !important;
+}
+
+/* Bege Buttons (Background-colored) */
+body.tema-bege-editorial .btn-primary,
+body.tema-bege-editorial .btn-gold,
+body.tema-bege-editorial .btn-flip-back,
+body.tema-bege-editorial .btn-submit,
+body.tema-bege-editorial .blog-preview-link,
+body.tema-bege-editorial .blog-card-btn {
+  background: #E8D9C0 !important;
+  color: #16120E !important;
+  border: 1px solid #E8D9C0 !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+}
+body.tema-bege-editorial .btn-primary:hover,
+body.tema-bege-editorial .btn-gold:hover,
+body.tema-bege-editorial .btn-flip-back:hover,
+body.tema-bege-editorial .btn-submit:hover,
+body.tema-bege-editorial .blog-preview-link:hover,
+body.tema-bege-editorial .blog-card-btn:hover {
+  background: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+  transform: translateY(-1px) !important;
+}
+body.tema-bege-editorial .btn-secondary,
+body.tema-bege-editorial .btn-outline {
+  border: 1px solid rgba(232, 217, 192, 0.4) !important;
+  background: #201A15 !important;
+  color: #E8D9C0 !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+}
+body.tema-bege-editorial .btn-secondary:hover,
+body.tema-bege-editorial .btn-outline:hover {
+  background: #E8D9C0 !important;
+  color: #16120E !important;
+  border-color: #E8D9C0 !important;
+}
+body.tema-bege-editorial .menu-reservar-highlight,
+body.tema-bege-editorial .btn-expand-reserva {
+  background: #E8D9C0 !important;
+  color: #16120E !important;
+  border-radius: 8px !important;
+}
+body.tema-bege-editorial .menu-reservar-highlight:hover,
+body.tema-bege-editorial .btn-expand-reserva:hover {
+  background: #FFFFFF !important;
+  color: #16120E !important;
+}
+body.tema-bege-editorial .menu-tab {
+  background: rgba(232, 217, 192, 0.05) !important;
+  border: 1px solid rgba(232, 217, 192, 0.12) !important;
+  color: #C4B7A5 !important;
+  border-radius: 6px !important;
+}
+body.tema-bege-editorial .menu-tab.active {
+  background: #E8D9C0 !important;
+  color: #16120E !important;
+  border-color: #E8D9C0 !important;
+}
+
+/* Bege Banners (Gold & Obsidian Overlay standard) */
+body.tema-bege-editorial .hero-bg {
+  opacity: 0.45 !important;
+  filter: none !important;
+}
+body.tema-bege-editorial .hero-overlay {
+  background: radial-gradient(ellipse at center bottom, rgba(212, 191, 160, 0.18) 0%, #16120E 100%) !important;
+  display: block !important;
+}
+body.tema-bege-editorial .historia-section::before {
+  opacity: 0.45 !important;
+  filter: none !important;
+}
+body.tema-bege-editorial .historia-section {
+  background: #16120E !important;
+}
+body.tema-bege-editorial .historia-section p, 
+body.tema-bege-editorial .historia-section span, 
+body.tema-bege-editorial .historia-section h2, 
+body.tema-bege-editorial .historia-section h3,
+body.tema-bege-editorial .historia-section .historia-stat-value,
+body.tema-bege-editorial .historia-section .historia-stat-label {
+  color: #E8D9C0 !important;
+}
+
+/* Bege Reserva Info Frame */
+body.tema-bege-editorial .reserva-info-frame {
+  border: 1px solid rgba(232, 217, 192, 0.18) !important;
+  background: rgba(32, 26, 21, 0.8) !important;
+  border-radius: 12px !important;
+}
+
+/* Bege Footer */
+body.tema-bege-editorial .footer {
+  background: #0E0B09 !important;
+}
+body.tema-bege-editorial .footer p,
+body.tema-bege-editorial .footer span,
+body.tema-bege-editorial .footer h3,
+body.tema-bege-editorial .footer h4,
+body.tema-bege-editorial .footer a {
+  color: #C4B7A5 !important;
+}
+body.tema-bege-editorial .footer img {
+  filter: grayscale(1) brightness(1.2) !important;
+}
+
+/* ------------------------------------------------------------
+   TEMA 4: MIDNIGHT TEAL (Predominant Teal Brand Theme)
+   ------------------------------------------------------------ */
+body.tema-midnight-teal {
+  background-color: #040C0C !important;
+  color: #E8F5F5 !important;
+  --color-bg-primary: #040C0C !important;
+  --color-bg-secondary: #0B1919 !important;
+  --color-bg-tertiary: #102424 !important;
+  --color-text-primary: #E8F5F5 !important;
+  --color-text-secondary: #A0C0C0 !important;
+  --color-text-muted: #709090 !important;
+  --color-border: rgba(43, 168, 160, 0.22) !important;
+  --color-border-gold: rgba(43, 168, 160, 0.3) !important;
+  --color-border-subtle: rgba(43, 168, 160, 0.1) !important;
+  --font-heading: 'Montserrat', sans-serif !important;
+  --font-body: 'Montserrat', sans-serif !important;
+  --radius-sm: 4px !important;
+  --radius-md: 8px !important;
+  --radius-lg: 8px !important;
+}
+
+/* Midnight Teal Header */
+body.tema-midnight-teal h1,
+body.tema-midnight-teal h2,
+body.tema-midnight-teal h3,
+body.tema-midnight-teal h4,
+body.tema-midnight-teal h5,
+body.tema-midnight-teal h6,
+body.tema-midnight-teal .font-heading,
+body.tema-midnight-teal .section-title {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 800 !important;
+  color: #E8F5F5 !important;
+}
+body.tema-midnight-teal .gold-gradient {
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  color: #2BA8A0 !important;
+}
+body.tema-midnight-teal .section-tag,
+body.tema-midnight-teal .hero-tag {
+  text-transform: uppercase !important;
+  letter-spacing: 4px !important;
+  color: #2BA8A0 !important;
+}
+
+/* Midnight Teal Navbar */
+body.tema-midnight-teal .navbar {
+  background: rgba(4, 12, 12, 0.85) !important;
+  border-bottom: 1px solid rgba(43, 168, 160, 0.15) !important;
+  color: #E8F5F5 !important;
+}
+body.tema-midnight-teal .navbar.scrolled {
+  background: rgba(4, 12, 12, 0.96) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
+}
+body.tema-midnight-teal .nav-link {
+  color: #E8F5F5 !important;
+}
+body.tema-midnight-teal .nav-link::after {
+  background: #2BA8A0 !important;
+}
+body.tema-midnight-teal .nav-hamburger span {
+  background: #2BA8A0 !important;
+}
+
+/* Midnight Teal Mobile Menu override */
+body.tema-midnight-teal .mobile-menu {
+  background: rgba(4, 12, 12, 0.98) !important;
+  border-left: 1px solid rgba(43, 168, 160, 0.2) !important;
+}
+body.tema-midnight-teal .mobile-menu-link {
+  color: #E8F5F5 !important;
+  border-bottom: 1px solid rgba(43, 168, 160, 0.1) !important;
+}
+body.tema-midnight-teal .mobile-menu-link:hover {
+  color: #2BA8A0 !important;
+}
+
+/* Midnight Teal Cards */
+body.tema-midnight-teal .rodizio-card,
+body.tema-midnight-teal .delivery-card,
+body.tema-midnight-teal .menu-item-card,
+body.tema-midnight-teal .blog-preview-card,
+body.tema-midnight-teal .blog-card,
+body.tema-midnight-teal .light-section .rodizio-card,
+body.tema-midnight-teal .light-section .delivery-card,
+body.tema-midnight-teal .light-section .menu-item-card,
+body.tema-midnight-teal .light-section .blog-preview-card,
+body.tema-midnight-teal .light-section .blog-card {
+  background: rgba(11, 25, 25, 0.8) !important;
+  border: 1px solid rgba(43, 168, 160, 0.25) !important;
+  border-radius: 8px !important;
+  color: #E8F5F5 !important;
+}
+body.tema-midnight-teal .rodizio-card:hover,
+body.tema-midnight-teal .delivery-card:hover,
+body.tema-midnight-teal .menu-item-card:hover,
+body.tema-midnight-teal .blog-preview-card:hover,
+body.tema-midnight-teal .blog-card:hover,
+body.tema-midnight-teal .light-section .rodizio-card:hover,
+body.tema-midnight-teal .light-section .delivery-card:hover,
+body.tema-midnight-teal .light-section .menu-item-card:hover,
+body.tema-midnight-teal .light-section .blog-preview-card:hover {
+  border-color: rgba(43, 168, 160, 0.6) !important;
+  box-shadow: 0 0 24px rgba(43, 168, 160, 0.15) !important;
+}
+body.tema-midnight-teal .flip-back,
+body.tema-midnight-teal .flip-back-featured {
+  background: #0B1919 !important;
+  border: 1px solid rgba(43, 168, 160, 0.3) !important;
+  border-radius: 8px !important;
+}
+
+/* Midnight Teal Prices */
+body.tema-midnight-teal .rodizio-price-value,
+body.tema-midnight-teal .price-tag,
+body.tema-midnight-teal .rodizio-price-row span {
+  color: #2BA8A0 !important;
+  font-weight: 700 !important;
+}
+
+/* Midnight Teal Buttons (Background-colored) */
+body.tema-midnight-teal .btn-primary,
+body.tema-midnight-teal .btn-gold,
+body.tema-midnight-teal .btn-flip-back,
+body.tema-midnight-teal .btn-submit,
+body.tema-midnight-teal .blog-preview-link,
+body.tema-midnight-teal .blog-card-btn {
+  background: #2BA8A0 !important;
+  color: #040C0C !important;
+  font-weight: 700 !important;
+  border-radius: 4px !important;
+  border: 1px solid #2BA8A0 !important;
+  box-shadow: 0 4px 15px rgba(43, 168, 160, 0.25) !important;
+}
+body.tema-midnight-teal .btn-primary:hover,
+body.tema-midnight-teal .btn-gold:hover,
+body.tema-midnight-teal .btn-flip-back:hover,
+body.tema-midnight-teal .btn-submit:hover,
+body.tema-midnight-teal .blog-preview-link:hover,
+body.tema-midnight-teal .blog-card-btn:hover {
+  background: #45D1C9 !important;
+  border-color: #45D1C9 !important;
+}
+body.tema-midnight-teal .btn-secondary,
+body.tema-midnight-teal .btn-outline {
+  border: 1px solid rgba(43, 168, 160, 0.5) !important;
+  background: #0B1919 !important;
+  color: #2BA8A0 !important;
+  border-radius: 4px !important;
+  font-weight: 700 !important;
+}
+body.tema-midnight-teal .btn-secondary:hover,
+body.tema-midnight-teal .btn-outline:hover {
+  background: #2BA8A0 !important;
+  color: #040C0C !important;
+  border-color: #2BA8A0 !important;
+}
+body.tema-midnight-teal .menu-reservar-highlight,
+body.tema-midnight-teal .btn-expand-reserva {
+  background: #2BA8A0 !important;
+  color: #040C0C !important;
+  border-radius: 4px !important;
+}
+body.tema-midnight-teal .menu-reservar-highlight:hover,
+body.tema-midnight-teal .btn-expand-reserva:hover {
+  background: #45D1C9 !important;
+  color: #040C0C !important;
+}
+body.tema-midnight-teal .menu-tab {
+  background: rgba(43, 168, 160, 0.05) !important;
+  border: 1px solid rgba(43, 168, 160, 0.12) !important;
+  color: #A0C0C0 !important;
+  border-radius: 4px !important;
+}
+body.tema-midnight-teal .menu-tab.active {
+  background: #2BA8A0 !important;
+  color: #040C0C !important;
+  border-color: #2BA8A0 !important;
+}
+
+/* Separators */
+body.tema-midnight-teal .gold-line,
+body.tema-midnight-teal .gold-line-full {
+  background: linear-gradient(to right, transparent, #2BA8A0, transparent) !important;
+  height: 1px !important;
+  opacity: 0.6 !important;
+}
+
+/* Midnight Teal Banners (Gold & Obsidian Overlay standard) */
+body.tema-midnight-teal .hero-bg {
+  opacity: 0.45 !important;
+  filter: none !important;
+}
+body.tema-midnight-teal .hero-overlay {
+  background: radial-gradient(ellipse at center bottom, rgba(43, 168, 160, 0.18) 0%, #040C0C 100%) !important;
+}
+body.tema-midnight-teal .hero-badge {
+  background: rgba(43, 168, 160, 0.1) !important;
+  border: 1px solid rgba(43, 168, 160, 0.3) !important;
+  color: #2BA8A0 !important;
+}
+body.tema-midnight-teal .historia-section::before {
+  opacity: 0.45 !important;
+  filter: none !important;
+}
+body.tema-midnight-teal .historia-section {
+  background: #0B1919 !important;
+}
+body.tema-midnight-teal .historia-section .gold-line {
+  background: #2BA8A0 !important;
+}
+body.tema-midnight-teal .footer {
+  background: #020606 !important;
+  border-top: 1px solid rgba(43, 168, 160, 0.2) !important;
+}
+
+/* Midnight Teal Reserva Info Frame */
+body.tema-midnight-teal .reserva-info-frame {
+  border: 1px solid rgba(43, 168, 160, 0.25) !important;
+  background: rgba(11, 25, 25, 0.8) !important;
+  border-radius: 8px !important;
+}
+
+/* ------------------------------------------------------------
+   TEMA 5: EDITORIAL BRANCO (Modern Charcoal & White Accent)
+   ------------------------------------------------------------ */
+body.tema-editorial-branco {
+  background-color: #080808 !important;
+  color: #FFFFFF !important;
+  --color-bg-primary: #080808 !important;
+  --color-bg-secondary: #121212 !important;
+  --color-bg-tertiary: #1A1A1A !important;
+  --color-text-primary: #FFFFFF !important;
+  --color-text-secondary: #D0D0D0 !important;
+  --color-text-muted: #888888 !important;
+  --color-border: rgba(255, 255, 255, 0.15) !important;
+  --color-border-gold: rgba(255, 255, 255, 0.2) !important;
+  --color-border-subtle: rgba(255, 255, 255, 0.08) !important;
+  --font-heading: 'Montserrat', sans-serif !important;
+  --font-body: 'Inter', sans-serif !important;
+  --radius-sm: 0px !important;
+  --radius-md: 0px !important;
+  --radius-lg: 0px !important;
+}
+
+/* Editorial Branco Header */
+body.tema-editorial-branco h1,
+body.tema-editorial-branco h2,
+body.tema-editorial-branco h3,
+body.tema-editorial-branco h4,
+body.tema-editorial-branco h5,
+body.tema-editorial-branco h6,
+body.tema-editorial-branco .font-heading,
+body.tema-editorial-branco .section-title {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+  text-transform: none !important;
+}
+body.tema-editorial-branco .gold-gradient {
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  color: #FFFFFF !important;
+}
+body.tema-editorial-branco .section-tag,
+body.tema-editorial-branco .hero-tag {
+  font-weight: 300 !important;
+  letter-spacing: 2px !important;
+  color: #888888 !important;
+  text-transform: uppercase !important;
+}
+body.tema-editorial-branco .section-title {
+  position: relative !important;
+  display: inline-block !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 2rem !important;
+}
+body.tema-editorial-branco .section-title::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 60px !important;
+  height: 2px !important;
+  background: #2BA8A0 !important;
+}
+
+/* Editorial Branco Navbar */
+body.tema-editorial-branco .navbar {
+  background: rgba(8, 8, 8, 0.85) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #FFFFFF !important;
+}
+body.tema-editorial-branco .navbar.scrolled {
+  background: rgba(8, 8, 8, 0.95) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+}
+body.tema-editorial-branco .nav-link {
+  color: #FFFFFF !important;
+}
+body.tema-editorial-branco .nav-link::after {
+  background: #FFFFFF !important;
+}
+body.tema-editorial-branco .nav-hamburger span {
+  background: #FFFFFF !important;
+}
+
+/* Editorial Branco Mobile Menu override */
+body.tema-editorial-branco .mobile-menu {
+  background: rgba(8, 8, 8, 0.98) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+body.tema-editorial-branco .mobile-menu-link {
+  color: #FFFFFF !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+body.tema-editorial-branco .mobile-menu-link:hover {
+  color: #2BA8A0 !important;
+}
+
+/* Editorial Branco Cards (Flat, borderless) */
+body.tema-editorial-branco .rodizio-card,
+body.tema-editorial-branco .delivery-card,
+body.tema-editorial-branco .menu-item-card,
+body.tema-editorial-branco .blog-preview-card,
+body.tema-editorial-branco .blog-card,
+body.tema-editorial-branco .light-section .rodizio-card,
+body.tema-editorial-branco .light-section .delivery-card,
+body.tema-editorial-branco .light-section .menu-item-card,
+body.tema-editorial-branco .light-section .blog-preview-card,
+body.tema-editorial-branco .light-section .blog-card {
+  background: #121212 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  color: #FFFFFF !important;
+}
+body.tema-editorial-branco .rodizio-card.featured,
+body.tema-editorial-branco .light-section .rodizio-card.featured {
+  background: #151515 !important;
+  border: 1.5px solid #FFFFFF !important;
+}
+body.tema-editorial-branco .flip-back,
+body.tema-editorial-branco .flip-back-featured {
+  background: #121212 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 0px !important;
+}
+
+/* Alternating section background colors (disabled in dark baseline, matches body) */
+body.tema-editorial-branco section:nth-of-type(odd),
+body.tema-editorial-branco .delivery-section {
+  background-color: #121212 !important;
+}
+body.tema-editorial-branco section:nth-of-type(even),
+body.tema-editorial-branco .menu-section {
+  background-color: #080808 !important;
+}
+body.tema-editorial-branco .historia-section p, 
+body.tema-editorial-branco .historia-section span, 
+body.tema-editorial-branco .historia-section h2, 
+body.tema-editorial-branco .historia-section h3,
+body.tema-editorial-branco .historia-section .historia-stat-value,
+body.tema-editorial-branco .historia-section .historia-stat-label {
+  color: #FFFFFF !important;
+}
+
+/* Editorial Branco Buttons (Background-colored) */
+body.tema-editorial-branco .btn-primary,
+body.tema-editorial-branco .btn-gold,
+body.tema-editorial-branco .btn-flip-back,
+body.tema-editorial-branco .btn-submit,
+body.tema-editorial-branco .blog-preview-link,
+body.tema-editorial-branco .blog-card-btn {
+  background: #FFFFFF !important;
+  color: #080808 !important;
+  border: 1px solid #FFFFFF !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  font-weight: 700 !important;
+}
+body.tema-editorial-branco .btn-primary:hover,
+body.tema-editorial-branco .btn-gold:hover,
+body.tema-editorial-branco .btn-flip-back:hover,
+body.tema-editorial-branco .btn-submit:hover,
+body.tema-editorial-branco .blog-preview-link:hover,
+body.tema-editorial-branco .blog-card-btn:hover {
+  background: #D0D0D0 !important;
+  border-color: #D0D0D0 !important;
+}
+body.tema-editorial-branco .btn-secondary,
+body.tema-editorial-branco .btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  color: #FFFFFF !important;
+  background: #121212 !important;
+  border-radius: 0px !important;
+}
+body.tema-editorial-branco .btn-secondary:hover,
+body.tema-editorial-branco .btn-outline:hover {
+  background: #FFFFFF !important;
+  color: #080808 !important;
+  border-color: #FFFFFF !important;
+}
+body.tema-editorial-branco .menu-reservar-highlight,
+body.tema-editorial-branco .btn-expand-reserva {
+  background: #FFFFFF !important;
+  color: #080808 !important;
+  border-radius: 0px !important;
+}
+body.tema-editorial-branco .menu-reservar-highlight:hover,
+body.tema-editorial-branco .btn-expand-reserva:hover {
+  background: #D0D0D0 !important;
+  color: #080808 !important;
+}
+body.tema-editorial-branco .menu-tab {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #D0D0D0 !important;
+  border-radius: 0px !important;
+}
+body.tema-editorial-branco .menu-tab.active {
+  background: #FFFFFF !important;
+  color: #080808 !important;
+  border-color: #FFFFFF !important;
+}
+
+/* Separators */
+body.tema-editorial-branco .gold-line,
+body.tema-editorial-branco .gold-line-full {
+  background: rgba(255, 255, 255, 0.2) !important;
+  height: 1px !important;
+  opacity: 1 !important;
+}
+
+/* Icon Colors and Badges */
+body.tema-editorial-branco .icon-circle,
+body.tema-editorial-branco .flip-back-icon svg,
+body.tema-editorial-branco .badge-icon {
+  color: #2BA8A0 !important;
+}
+
+/* Editorial Branco Banners (Gold & Obsidian Overlay standard) */
+body.tema-editorial-branco .hero-bg {
+  opacity: 0.45 !important;
+  filter: none !important;
+}
+body.tema-editorial-branco .hero-overlay {
+  background: radial-gradient(ellipse at center bottom, rgba(43, 168, 160, 0.12) 0%, #080808 100%) !important;
+  display: block !important;
+}
+body.tema-editorial-branco .historia-section::before {
+  opacity: 0.45 !important;
+  filter: none !important;
+}
+body.tema-editorial-branco .footer {
+  background: #020202 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+body.tema-editorial-branco .footer p,
+body.tema-editorial-branco .footer span,
+body.tema-editorial-branco .footer h3,
+body.tema-editorial-branco .footer h4,
+body.tema-editorial-branco .footer a {
+  color: #D0D0D0 !important;
+}
+
+/* Editorial Branco Reserva Info Frame */
+body.tema-editorial-branco .reserva-info-frame {
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  background: rgba(18, 18, 18, 0.8) !important;
+  border-radius: 0px !important;
+}
+
+/* ------------------------------------------------------------
+   TEMA 6: GOLD & OBSIDIAN (Fine Dining Luxury Gold)
+   ------------------------------------------------------------ */
+body.tema-gold-obsidian {
+  background-color: #060606 !important;
+  color: #F5F0E8 !important;
+  --color-bg-primary: #060606 !important;
+  --color-bg-secondary: #0D0D0D !important;
+  --color-bg-tertiary: #0A0A0A !important;
+  --color-text-primary: #F5F0E8 !important;
+  --color-text-secondary: rgba(201, 169, 110, 0.8) !important;
+  --color-text-muted: rgba(201, 169, 110, 0.5) !important;
+  --color-border: rgba(201, 169, 110, 0.2) !important;
+  --color-border-gold: rgba(201, 169, 110, 0.3) !important;
+  --color-border-subtle: rgba(201, 169, 110, 0.1) !important;
+  --font-heading: 'Cormorant Garamond', serif !important;
+  --font-body: 'Montserrat', sans-serif !important;
+  --radius-sm: 4px !important;
+  --radius-md: 4px !important;
+  --radius-lg: 4px !important;
+}
+
+/* Gold Obsidian Headers & Typography */
+body.tema-gold-obsidian h1,
+body.tema-gold-obsidian h2,
+body.tema-gold-obsidian h3,
+body.tema-gold-obsidian h4,
+body.tema-gold-obsidian h5,
+body.tema-gold-obsidian h6,
+body.tema-gold-obsidian .font-heading,
+body.tema-gold-obsidian .section-title {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+}
+body.tema-gold-obsidian .section-title,
+body.tema-gold-obsidian .hero-title,
+body.tema-gold-obsidian .gold-gradient {
+  background: linear-gradient(135deg, #C9A96E, #E8D4A0, #C9A96E) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: none !important;
+}
+body.tema-gold-obsidian .section-tag,
+body.tema-gold-obsidian .hero-tag {
+  text-transform: uppercase !important;
+  letter-spacing: 6px !important;
+  font-size: 10px !important;
+  color: rgba(201, 169, 110, 0.6) !important;
+  font-weight: 600 !important;
+}
+
+/* Gold Obsidian Navbar */
+body.tema-gold-obsidian .navbar {
+  background: rgba(6, 6, 6, 0.85) !important;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.15) !important;
+  color: #F5F0E8 !important;
+}
+body.tema-gold-obsidian .navbar.scrolled {
+  background: rgba(6, 6, 6, 0.98) !important;
+}
+body.tema-gold-obsidian .nav-link {
+  color: #F5F0E8 !important;
+}
+body.tema-gold-obsidian .nav-link::after {
+  background: #C9A96E !important;
+}
+body.tema-gold-obsidian .nav-hamburger span {
+  background: #C9A96E !important;
+}
+
+/* Gold Obsidian Mobile Menu override */
+body.tema-gold-obsidian .mobile-menu {
+  background: rgba(6, 6, 6, 0.98) !important;
+  border-left: 1px solid rgba(201, 169, 110, 0.2) !important;
+}
+body.tema-gold-obsidian .mobile-menu-link {
+  color: #F5F0E8 !important;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.1) !important;
+}
+body.tema-gold-obsidian .mobile-menu-link:hover {
+  color: #C9A96E !important;
+}
+
+/* Gold Obsidian Cards */
+body.tema-gold-obsidian .rodizio-card,
+body.tema-gold-obsidian .delivery-card,
+body.tema-gold-obsidian .menu-item-card,
+body.tema-gold-obsidian .blog-preview-card,
+body.tema-gold-obsidian .blog-card,
+body.tema-gold-obsidian .light-section .rodizio-card,
+body.tema-gold-obsidian .light-section .delivery-card,
+body.tema-gold-obsidian .light-section .menu-item-card,
+body.tema-gold-obsidian .light-section .blog-preview-card,
+body.tema-gold-obsidian .light-section .blog-card {
+  background: #0A0A0A !important;
+  border: 1px solid rgba(201, 169, 110, 0.2) !important;
+  border-radius: 4px !important;
+  color: #F5F0E8 !important;
+}
+body.tema-gold-obsidian .rodizio-card:hover,
+body.tema-gold-obsidian .delivery-card:hover,
+body.tema-gold-obsidian .menu-item-card:hover,
+body.tema-gold-obsidian .blog-preview-card:hover,
+body.tema-gold-obsidian .blog-card:hover,
+body.tema-gold-obsidian .light-section .rodizio-card:hover,
+body.tema-gold-obsidian .light-section .delivery-card:hover,
+body.tema-gold-obsidian .light-section .menu-item-card:hover,
+body.tema-gold-obsidian .light-section .blog-preview-card:hover {
+  border-color: rgba(201, 169, 110, 0.5) !important;
+  box-shadow: 0 4px 24px rgba(201, 169, 110, 0.08) !important;
+}
+body.tema-gold-obsidian .flip-back,
+body.tema-gold-obsidian .flip-back-featured {
+  background: #0A0A0A !important;
+  border: 1px solid rgba(201, 169, 110, 0.3) !important;
+  border-radius: 4px !important;
+}
+
+/* Gold Obsidian Prices */
+body.tema-gold-obsidian .rodizio-price-value,
+body.tema-gold-obsidian .price-tag,
+body.tema-gold-obsidian .rodizio-price-row span {
+  color: #C9A96E !important;
+  font-weight: 600 !important;
+}
+
+/* Gold Obsidian Buttons (Background-colored) */
+body.tema-gold-obsidian .btn-primary,
+body.tema-gold-obsidian .btn-gold,
+body.tema-gold-obsidian .btn-flip-back,
+body.tema-gold-obsidian .btn-submit,
+body.tema-gold-obsidian .blog-preview-link,
+body.tema-gold-obsidian .blog-card-btn {
+  background: #C9A96E !important;
+  color: #060606 !important;
+  border: 1px solid #C9A96E !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: none !important;
+}
+body.tema-gold-obsidian .btn-primary:hover,
+body.tema-gold-obsidian .btn-gold:hover,
+body.tema-gold-obsidian .btn-flip-back:hover,
+body.tema-gold-obsidian .btn-submit:hover,
+body.tema-gold-obsidian .blog-preview-link:hover,
+body.tema-gold-obsidian .blog-card-btn:hover {
+  background: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}
+body.tema-gold-obsidian .btn-secondary,
+body.tema-gold-obsidian .btn-outline {
+  border: 1px solid rgba(201, 169, 110, 0.4) !important;
+  background: #0D0D0D !important;
+  color: #C9A96E !important;
+  border-radius: 4px !important;
+}
+body.tema-gold-obsidian .btn-secondary:hover,
+body.tema-gold-obsidian .btn-outline:hover {
+  background: #C9A96E !important;
+  color: #060606 !important;
+  border-color: #C9A96E !important;
+}
+body.tema-gold-obsidian .menu-reservar-highlight,
+body.tema-gold-obsidian .btn-expand-reserva {
+  background: #C9A96E !important;
+  color: #060606 !important;
+  border-radius: 4px !important;
+}
+body.tema-gold-obsidian .menu-reservar-highlight:hover,
+body.tema-gold-obsidian .btn-expand-reserva:hover {
+  background: #FFFFFF !important;
+  color: #060606 !important;
+}
+body.tema-gold-obsidian .menu-tab {
+  background: rgba(201, 169, 110, 0.05) !important;
+  border: 1px solid rgba(201, 169, 110, 0.12) !important;
+  color: rgba(201, 169, 110, 0.7) !important;
+  border-radius: 4px !important;
+}
+body.tema-gold-obsidian .menu-tab.active {
+  background: #C9A96E !important;
+  color: #060606 !important;
+  border-color: #C9A96E !important;
+}
+
+/* Separators */
+body.tema-gold-obsidian .gold-line,
+body.tema-gold-obsidian .gold-line-full {
+  background: linear-gradient(to right, transparent, rgba(201, 169, 110, 0.4), transparent) !important;
+  height: 1px !important;
+  opacity: 1 !important;
+}
+
+/* Gold Obsidian Banners (Standard) */
+body.tema-gold-obsidian .hero-bg {
+  opacity: 0.45 !important;
+  filter: none !important;
+}
+body.tema-gold-obsidian .hero-overlay {
+  background: radial-gradient(ellipse at center bottom, rgba(201, 169, 110, 0.15) 0%, #060606 100%) !important;
+}
+body.tema-gold-obsidian .hero-badge {
+  background: rgba(201, 169, 110, 0.1) !important;
+  border: 1px solid rgba(201, 169, 110, 0.25) !important;
+  color: #C9A96E !important;
+}
+body.tema-gold-obsidian .historia-section::before {
+  opacity: 0.45 !important;
+  filter: none !important;
+}
+body.tema-gold-obsidian .historia-section {
+  background: #0D0D0D !important;
+}
+
+/* Accent overrides to Gold (NO teal anywhere, except top left logo) */
+body.tema-gold-obsidian .whatsapp-float {
+  background: #C9A96E !important;
+  box-shadow: 0 4px 20px rgba(201, 169, 110, 0.4) !important;
+}
+body.tema-gold-obsidian .whatsapp-float:hover {
+  box-shadow: 0 8px 30px rgba(201, 169, 110, 0.6) !important;
+}
+body.tema-gold-obsidian .custom-cursor {
+  background-color: #C9A96E !important;
+}
+body.tema-gold-obsidian .custom-cursor-outline {
+  border-color: #C9A96E !important;
+}
+body.tema-gold-obsidian .blog-card-category {
+  background: #C9A96E !important;
+  color: #060606 !important;
+}
+body.tema-gold-obsidian .icon-circle,
+body.tema-gold-obsidian .flip-back-icon svg,
+body.tema-gold-obsidian .badge-icon {
+  color: #C9A96E !important;
+}
+body.tema-gold-obsidian .footer {
+  background: #050505 !important;
+  border-top: 1px solid rgba(201, 169, 110, 0.2) !important;
+}
+body.tema-gold-obsidian .footer::before {
+  background: linear-gradient(to right, transparent, #C9A96E, transparent) !important;
+}
+body.tema-gold-obsidian .footer img {
+  filter: brightness(1.05) drop-shadow(0 0 8px rgba(201, 169, 110, 0.25)) !important;
+}
+
+/* Gold Obsidian Reserva Info Frame */
+body.tema-gold-obsidian .reserva-info-frame {
+  border: 1px solid rgba(201, 169, 110, 0.22) !important;
+  background: rgba(13, 13, 13, 0.8) !important;
+  border-radius: 4px !important;
+}
