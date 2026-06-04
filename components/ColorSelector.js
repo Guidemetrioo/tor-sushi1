@@ -38,6 +38,36 @@ const themes = [
     name: 'GOLD &\nOBSIDIAN', 
     colors: ['#060606', '#0D0D0D', '#C9A96E'],
     desc: 'Fine dining absoluto, dourado sobre obsidian'
+  },
+  { 
+    id: 'bronze-antigo', 
+    name: 'BRONZE\nANTIGO', 
+    colors: ['#16110D', '#0D0907', '#A87C53'],
+    desc: 'Lounge tradicional com bronze antigo e obsidian'
+  },
+  { 
+    id: 'titanio-ardosia', 
+    name: 'TITÂNIO &\nARDÓSIA', 
+    colors: ['#1A2026', '#12161A', '#CCCCCC'],
+    desc: 'Estética industrial fria, minimalista e polida'
+  },
+  { 
+    id: 'ouro-rose', 
+    name: 'OURO\nROSÉ', 
+    colors: ['#1A1211', '#0F0A09', '#B76E79'],
+    desc: 'Brilho rosé caloroso, moderno e sofisticado'
+  },
+  { 
+    id: 'prata-shibori', 
+    name: 'PRATA &\nSHIBORI', 
+    colors: ['#0B1321', '#060B13', '#E0E0E0'],
+    desc: 'Azul shibori tradicional e prata polida'
+  },
+  { 
+    id: 'cromo-preto', 
+    name: 'CROMO\nPRETO', 
+    colors: ['#0A0A0A', '#030303', '#E5E5E5'],
+    desc: 'Preto absoluto com detalhes em cromo metálico'
   }
 ];
 
@@ -49,7 +79,12 @@ export default function ColorSelector() {
   // Load theme from localStorage on mount
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('torsushi-theme') || 'carbono-quente';
+      let savedTheme = 'carbono-quente';
+      try {
+        savedTheme = localStorage.getItem('torsushi-theme') || 'carbono-quente';
+      } catch (e) {
+        console.warn('LocalStorage is blocked:', e);
+      }
       setActiveTheme(savedTheme);
       document.body.className = `tema-${savedTheme}`;
     }
@@ -59,7 +94,11 @@ export default function ColorSelector() {
     setActiveTheme(themeId);
     if (typeof window !== 'undefined') {
       document.body.className = `tema-${themeId}`;
-      localStorage.setItem('torsushi-theme', themeId);
+      try {
+        localStorage.setItem('torsushi-theme', themeId);
+      } catch (e) {
+        console.warn('Failed to save theme:', e);
+      }
     }
   };
 
@@ -101,7 +140,9 @@ export default function ColorSelector() {
             backdropFilter: 'blur(12px)',
             WebkitBackdropFilter: 'blur(12px)',
             border: '1px solid rgba(255, 255, 255, 0.12)',
-            width: '280px',
+            width: '300px',
+            maxHeight: '85vh',
+            overflowY: 'auto',
             boxShadow: '0 12px 40px rgba(0, 0, 0, 0.5)',
             display: 'flex',
             flexDirection: 'column',
@@ -144,7 +185,7 @@ export default function ColorSelector() {
             </button>
           </div>
 
-          {/* Grid of 6 Theme Cards */}
+          {/* Grid of Theme Cards */}
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
@@ -159,9 +200,9 @@ export default function ColorSelector() {
                   onMouseEnter={() => setHoveredTheme(theme)}
                   onMouseLeave={() => setHoveredTheme(null)}
                   style={{
-                    background: isActive ? 'rgba(43, 168, 160, 0.15)' : 'rgba(255, 255, 255, 0.03)',
+                    background: isActive ? 'rgba(255, 255, 255, 0.08)' : 'rgba(255, 255, 255, 0.03)',
                     border: isActive 
-                      ? '2px solid #2BA8A0' 
+                      ? `2px solid ${theme.colors[2]}` 
                       : '1px solid rgba(255, 255, 255, 0.12)',
                     borderRadius: '6px',
                     padding: '8px 4px',
@@ -171,9 +212,9 @@ export default function ColorSelector() {
                     justifyContent: 'space-between',
                     alignItems: 'center',
                     gap: '6px',
-                    height: '76px',
+                    height: '68px',
                     transition: 'all 0.2s ease',
-                    boxShadow: isActive ? '0 0 12px rgba(43, 168, 160, 0.2)' : 'none',
+                    boxShadow: isActive ? `0 0 12px ${theme.colors[2]}40` : 'none',
                   }}
                 >
                   {/* Theme Name */}

@@ -1264,3 +1264,505 @@ body.tema-gold-obsidian .reserva-info-frame {
   background: rgba(13, 13, 13, 0.8) !important;
   border-radius: 4px !important;
 }
+
+/* ============================================================
+   TEMA 7: BRONZE ANTIGO (Traditional Japanese Lounge)
+   ============================================================ */
+body.tema-bronze-antigo {
+  background-color: #0D0907 !important;
+  color: #F5F0E8 !important;
+  --color-bg-primary: #0D0907 !important;
+  --color-bg-secondary: #16110D !important;
+  --color-bg-tertiary: #1E1712 !important;
+  --color-text-primary: #F5F0E8 !important;
+  --color-text-secondary: #A09880 !important;
+  --color-text-muted: #7A725D !important;
+  --color-border: rgba(168, 124, 83, 0.25) !important;
+  --color-border-gold: rgba(168, 124, 83, 0.4) !important;
+  --color-border-subtle: rgba(168, 124, 83, 0.15) !important;
+  --font-heading: 'Noto Serif JP', serif !important;
+  --font-body: 'Montserrat', sans-serif !important;
+  --radius-sm: 6px !important;
+  --radius-md: 8px !important;
+  --radius-lg: 12px !important;
+}
+
+body.tema-bronze-antigo h1,
+body.tema-bronze-antigo h2,
+body.tema-bronze-antigo h3,
+body.tema-bronze-antigo h4,
+body.tema-bronze-antigo h5,
+body.tema-bronze-antigo h6,
+body.tema-bronze-antigo .font-heading,
+body.tema-bronze-antigo .section-title {
+  font-family: 'Noto Serif JP', serif !important;
+  font-weight: 700 !important;
+  color: #F5F0E8 !important;
+}
+
+body.tema-bronze-antigo .gold-gradient {
+  background: linear-gradient(135deg, #A87C53, #D4A373, #A87C53) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+body.tema-bronze-antigo .section-tag,
+body.tema-bronze-antigo .hero-tag {
+  color: #A87C53 !important;
+  letter-spacing: 5px !important;
+}
+
+/* Layout Customization: Thicker Wood-like Borders & Double Dividers */
+body.tema-bronze-antigo .rodizio-card,
+body.tema-bronze-antigo .delivery-card,
+body.tema-bronze-antigo .menu-item-card,
+body.tema-bronze-antigo .blog-card,
+body.tema-bronze-antigo .reserva-info-frame {
+  border: 2px solid rgba(168, 124, 83, 0.35) !important;
+  background: #16110D !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.tema-bronze-antigo .gold-line {
+  background: #A87C53 !important;
+  height: 3px !important;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+body.tema-bronze-antigo .btn-primary,
+body.tema-bronze-antigo .btn-gold,
+body.tema-bronze-antigo .btn-submit,
+body.tema-bronze-antigo .btn-flip-back {
+  background: #A87C53 !important;
+  color: #0D0907 !important;
+  border: 1px solid #A87C53 !important;
+  font-weight: 700 !important;
+}
+
+body.tema-bronze-antigo .btn-primary:hover,
+body.tema-bronze-antigo .btn-gold:hover,
+body.tema-bronze-antigo .btn-submit:hover {
+  background: #C59567 !important;
+  border-color: #C59567 !important;
+  color: #0D0907 !important;
+}
+
+body.tema-bronze-antigo .custom-cursor {
+  background-color: #A87C53 !important;
+}
+
+body.tema-bronze-antigo .whatsapp-float {
+  background: #A87C53 !important;
+  box-shadow: 0 4px 20px rgba(168, 124, 83, 0.4) !important;
+}
+
+/* Offset Layout in Nossa História */
+body.tema-bronze-antigo .historia-grid {
+  gap: 3rem !important;
+}
+
+/* ============================================================
+   TEMA 8: TITÂNIO & ARDÓSIA (Sleek Industrial Luxury)
+   ============================================================ */
+body.tema-titanio-ardosia {
+  background-color: #12161A !important;
+  color: #E2E8F0 !important;
+  --color-bg-primary: #12161A !important;
+  --color-bg-secondary: #1A2026 !important;
+  --color-bg-tertiary: #242B33 !important;
+  --color-text-primary: #E2E8F0 !important;
+  --color-text-secondary: #94A3B8 !important;
+  --color-text-muted: #64748B !important;
+  --color-border: rgba(204, 204, 204, 0.15) !important;
+  --color-border-gold: rgba(204, 204, 204, 0.25) !important;
+  --color-border-subtle: rgba(204, 204, 204, 0.08) !important;
+  --font-heading: 'Inter', sans-serif !important;
+  --font-body: 'Inter', sans-serif !important;
+  --radius-sm: 0px !important;
+  --radius-md: 0px !important;
+  --radius-lg: 0px !important;
+}
+
+body.tema-titanio-ardosia h1,
+body.tema-titanio-ardosia h2,
+body.tema-titanio-ardosia h3,
+body.tema-titanio-ardosia h4,
+body.tema-titanio-ardosia h5,
+body.tema-titanio-ardosia h6,
+body.tema-titanio-ardosia .font-heading,
+body.tema-titanio-ardosia .section-title {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.5px !important;
+  color: #FFFFFF !important;
+}
+
+body.tema-titanio-ardosia .gold-gradient {
+  background: linear-gradient(135deg, #CCCCCC, #FFFFFF, #999999) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+body.tema-titanio-ardosia .section-tag,
+body.tema-titanio-ardosia .hero-tag {
+  color: #CCCCCC !important;
+  font-weight: 700 !important;
+}
+
+/* Layout Customization: Sharp Edges, Minimalist Outlines */
+body.tema-titanio-ardosia .rodizio-card,
+body.tema-titanio-ardosia .delivery-card,
+body.tema-titanio-ardosia .menu-item-card,
+body.tema-titanio-ardosia .blog-card,
+body.tema-titanio-ardosia .reserva-info-frame,
+body.tema-titanio-ardosia .form-input,
+body.tema-titanio-ardosia .form-select,
+body.tema-titanio-ardosia .form-textarea,
+body.tema-titanio-ardosia .btn-primary,
+body.tema-titanio-ardosia .btn-secondary,
+body.tema-titanio-ardosia .btn-outline {
+  border-radius: 0px !important;
+}
+
+body.tema-titanio-ardosia .btn-primary {
+  background: transparent !important;
+  color: #FFFFFF !important;
+  border: 2px solid #FFFFFF !important;
+}
+
+body.tema-titanio-ardosia .btn-primary:hover {
+  background: #FFFFFF !important;
+  color: #12161A !important;
+  box-shadow: none !important;
+}
+
+body.tema-titanio-ardosia .btn-secondary,
+body.tema-titanio-ardosia .btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  background: transparent !important;
+  color: #CCCCCC !important;
+}
+
+body.tema-titanio-ardosia .btn-secondary:hover,
+body.tema-titanio-ardosia .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #FFFFFF !important;
+}
+
+body.tema-titanio-ardosia .custom-cursor {
+  background-color: #CCCCCC !important;
+  border-radius: 0px !important; /* Square cursor */
+}
+
+body.tema-titanio-ardosia .navbar {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ============================================================
+   TEMA 9: OURO ROSÉ (Rose Gold Warm Luxury)
+   ============================================================ */
+body.tema-ouro-rose {
+  background-color: #0F0A09 !important;
+  color: #FFF5F5 !important;
+  --color-bg-primary: #0F0A09 !important;
+  --color-bg-secondary: #1A1211 !important;
+  --color-bg-tertiary: #241A18 !important;
+  --color-text-primary: #FFF5F5 !important;
+  --color-text-secondary: #D4C3C0 !important;
+  --color-text-muted: #A08C89 !important;
+  --color-border: rgba(183, 110, 121, 0.2) !important;
+  --color-border-gold: rgba(183, 110, 121, 0.3) !important;
+  --color-border-subtle: rgba(183, 110, 121, 0.1) !important;
+  --font-heading: 'Playfair Display', serif !important;
+  --font-body: 'Montserrat', sans-serif !important;
+  --radius-sm: 8px !important;
+  --radius-md: 12px !important;
+  --radius-lg: 18px !important;
+}
+
+body.tema-ouro-rose h1,
+body.tema-ouro-rose h2,
+body.tema-ouro-rose h3,
+body.tema-ouro-rose h4,
+body.tema-ouro-rose h5,
+body.tema-ouro-rose h6,
+body.tema-ouro-rose .font-heading,
+body.tema-ouro-rose .section-title {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+  color: #FFF5F5 !important;
+}
+
+body.tema-ouro-rose .gold-gradient {
+  background: linear-gradient(135deg, #B76E79, #E6A2AC, #B76E79) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+body.tema-ouro-rose .section-tag,
+body.tema-ouro-rose .hero-tag {
+  color: #B76E79 !important;
+  font-weight: 500 !important;
+  letter-spacing: 4px !important;
+}
+
+/* Layout Customization: Curved Glassmorphism & Soft Rosé Shadows */
+body.tema-ouro-rose .rodizio-card,
+body.tema-ouro-rose .delivery-card,
+body.tema-ouro-rose .menu-item-card,
+body.tema-ouro-rose .blog-card,
+body.tema-ouro-rose .reserva-info-frame {
+  background: rgba(26, 18, 17, 0.7) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(183, 110, 121, 0.25) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 12px 35px rgba(183, 110, 121, 0.08) !important;
+}
+
+body.tema-ouro-rose .btn-primary,
+body.tema-ouro-rose .btn-gold,
+body.tema-ouro-rose .btn-submit,
+body.tema-ouro-rose .btn-flip-back {
+  background: #B76E79 !important;
+  color: #FFFFFF !important;
+  border: 1px solid transparent !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 15px rgba(183, 110, 121, 0.3) !important;
+}
+
+body.tema-ouro-rose .btn-primary:hover,
+body.tema-ouro-rose .btn-gold:hover,
+body.tema-ouro-rose .btn-submit:hover {
+  background: #C9828D !important;
+  box-shadow: 0 6px 20px rgba(183, 110, 121, 0.5) !important;
+}
+
+body.tema-ouro-rose .custom-cursor {
+  background-color: #B76E79 !important;
+  box-shadow: 0 0 8px rgba(183, 110, 121, 0.6) !important;
+}
+
+body.tema-ouro-rose .whatsapp-float {
+  background: #B76E79 !important;
+  box-shadow: 0 4px 20px rgba(183, 110, 121, 0.4) !important;
+}
+
+/* ============================================================
+   TEMA 10: PRATA & SHIBORI (Japanese Indigo & Silver)
+   ============================================================ */
+body.tema-prata-shibori {
+  background-color: #060B13 !important;
+  color: #E8F0F8 !important;
+  --color-bg-primary: #060B13 !important;
+  --color-bg-secondary: #0B1321 !important;
+  --color-bg-tertiary: #111C30 !important;
+  --color-text-primary: #E8F0F8 !important;
+  --color-text-secondary: #8EA4C0 !important;
+  --color-text-muted: #5B7290 !important;
+  --color-border: rgba(224, 224, 224, 0.15) !important;
+  --color-border-gold: rgba(224, 224, 224, 0.25) !important;
+  --color-border-subtle: rgba(224, 224, 224, 0.08) !important;
+  --font-heading: 'Playfair Display', serif !important;
+  --font-body: 'Inter', sans-serif !important;
+  --radius-sm: 4px !important;
+  --radius-md: 6px !important;
+  --radius-lg: 8px !important;
+}
+
+body.tema-prata-shibori h1,
+body.tema-prata-shibori h2,
+body.tema-prata-shibori h3,
+body.tema-prata-shibori h4,
+body.tema-prata-shibori h5,
+body.tema-prata-shibori h6,
+body.tema-prata-shibori .font-heading,
+body.tema-prata-shibori .section-title {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+  color: #E8F0F8 !important;
+}
+
+body.tema-prata-shibori .gold-gradient {
+  background: linear-gradient(135deg, #E0E0E0, #FFFFFF, #B0B0B0) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+body.tema-prata-shibori .section-tag,
+body.tema-prata-shibori .hero-tag {
+  color: #8EA4C0 !important;
+  letter-spacing: 4px !important;
+}
+
+/* Layout Customization: Overlapping Offset Cards & Staggered Spacing */
+body.tema-prata-shibori .rodizio-card {
+  margin: 10px 0 !important;
+  border: 1px solid rgba(224, 224, 224, 0.2) !important;
+  background: #0B1321 !important;
+}
+
+body.tema-prata-shibori .btn-primary,
+body.tema-prata-shibori .btn-gold,
+body.tema-prata-shibori .btn-submit,
+body.tema-prata-shibori .btn-flip-back {
+  background: linear-gradient(180deg, #E0E0E0 0%, #B0B0B0 100%) !important;
+  color: #060B13 !important;
+  border: none !important;
+  font-weight: 700 !important;
+}
+
+body.tema-prata-shibori .btn-primary:hover,
+body.tema-prata-shibori .btn-gold:hover,
+body.tema-prata-shibori .btn-submit:hover {
+  background: linear-gradient(180deg, #FFFFFF 0%, #D0D0D0 100%) !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2) !important;
+}
+
+body.tema-prata-shibori .custom-cursor {
+  background-color: #E0E0E0 !important;
+  border: 2px solid #060B13 !important;
+}
+
+body.tema-prata-shibori .whatsapp-float {
+  background: #2C5E8A !important;
+  box-shadow: 0 4px 20px rgba(44, 94, 138, 0.4) !important;
+}
+
+/* ============================================================
+   TEMA 11: CROMO PRETO (Absolute Monochrome Noir)
+   ============================================================ */
+body.tema-cromo-preto {
+  background-color: #030303 !important;
+  color: #FFFFFF !important;
+  --color-bg-primary: #030303 !important;
+  --color-bg-secondary: #0A0A0A !important;
+  --color-bg-tertiary: #121212 !important;
+  --color-text-primary: #FFFFFF !important;
+  --color-text-secondary: #B5B5B5 !important;
+  --color-text-muted: #777777 !important;
+  --color-border: rgba(255, 255, 255, 0.12) !important;
+  --color-border-gold: rgba(255, 255, 255, 0.2) !important;
+  --color-border-subtle: rgba(255, 255, 255, 0.06) !important;
+  --font-heading: 'Montserrat', sans-serif !important;
+  --font-body: 'Inter', sans-serif !important;
+  --radius-sm: 0px !important;
+  --radius-md: 0px !important;
+  --radius-lg: 0px !important;
+}
+
+body.tema-cromo-preto h1,
+body.tema-cromo-preto h2,
+body.tema-cromo-preto h3,
+body.tema-cromo-preto h4,
+body.tema-cromo-preto h5,
+body.tema-cromo-preto h6,
+body.tema-cromo-preto .font-heading,
+body.tema-cromo-preto .section-title {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -1.5px !important;
+  color: #FFFFFF !important;
+}
+
+body.tema-cromo-preto .gold-gradient {
+  background: linear-gradient(135deg, #FFFFFF, #CCCCCC, #FFFFFF) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+body.tema-cromo-preto .section-tag,
+body.tema-cromo-preto .hero-tag {
+  color: #E5E5E5 !important;
+  font-weight: 800 !important;
+  letter-spacing: 6px !important;
+}
+
+/* Layout Override: Minimalist text list for menu items instead of image cards */
+body.tema-cromo-preto .menu-grid {
+  grid-template-columns: 1fr !important;
+  gap: 12px !important;
+}
+
+body.tema-cromo-preto .menu-item-card {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+  padding: 12px 0 !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+}
+
+body.tema-cromo-preto .menu-item-card img {
+  display: none !important; /* Hide image completely for a ultra-minimalist text list menu */
+}
+
+body.tema-cromo-preto .menu-item-info {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: baseline !important;
+  gap: 1.5rem;
+}
+
+body.tema-cromo-preto .menu-item-name {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+}
+
+body.tema-cromo-preto .menu-item-desc {
+  font-size: 0.85rem !important;
+  color: #777777 !important;
+  margin-top: 0 !important;
+  order: 3;
+}
+
+body.tema-cromo-preto .rodizio-card,
+body.tema-cromo-preto .delivery-card,
+body.tema-cromo-preto .reserva-info-frame {
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  background: #0A0A0A !important;
+  border-radius: 0px !important;
+}
+
+body.tema-cromo-preto .btn-primary,
+body.tema-cromo-preto .btn-gold,
+body.tema-cromo-preto .btn-submit,
+body.tema-cromo-preto .btn-flip-back {
+  background: #FFFFFF !important;
+  color: #030303 !important;
+  border: 1px solid #FFFFFF !important;
+  font-weight: 800 !important;
+  text-transform: uppercase;
+}
+
+body.tema-cromo-preto .btn-primary:hover,
+body.tema-cromo-preto .btn-gold:hover,
+body.tema-cromo-preto .btn-submit:hover {
+  background: #E5E5E5 !important;
+  border-color: #E5E5E5 !important;
+  box-shadow: none !important;
+}
+
+body.tema-cromo-preto .custom-cursor {
+  background-color: #FFFFFF !important;
+  border: 1px solid #030303 !important;
+}
+
+body.tema-cromo-preto .whatsapp-float {
+  background: #FFFFFF !important;
+  color: #030303 !important;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.25) !important;
+}
+

@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 export default function CustomCursor() {
   const cursorRef = useRef(null);
   const [visible, setVisible] = useState(false);
+  const visibleRef = useRef(false);
 
   const mousePos = useRef({ x: 0, y: 0 });
   const cursorPos = useRef({ x: 0, y: 0 });
@@ -17,6 +18,7 @@ export default function CustomCursor() {
     const mediaQuery = window.matchMedia('(min-width: 1024px)');
     const handleMediaChange = (e) => {
       if (!e.matches) {
+        visibleRef.current = false;
         setVisible(false);
       }
     };
@@ -30,11 +32,11 @@ export default function CustomCursor() {
     // Smooth follower animation loop
     let animId;
     const tick = () => {
-      cursorPos.current.x += (mousePos.current.x - cursorPos.current.x) * 0.1;
-      cursorPos.current.y += (mousePos.current.y - cursorPos.current.y) * 0.1;
+      cursorPos.current.x += (mousePos.current.x - cursorPos.current.x) * 0.15;
+      cursorPos.current.y += (mousePos.current.y - cursorPos.current.y) * 0.15;
       
       if (cursorRef.current) {
-        cursorRef.current.style.transform = `translate3d(${cursorPos.current.x - 6}px, ${cursorPos.current.y - 6}px, 0) scale(${isHovered.current ? 2.5 : 1})`;
+        cursorRef.current.style.transform = `translate3d(${cursorPos.current.x - 6}px, ${cursorPos.current.y - 6}px, 0) scale(${isHovered.current ? 2.2 : 1})`;
       }
       animId = requestAnimationFrame(tick);
     };
@@ -43,14 +45,19 @@ export default function CustomCursor() {
     const onMouseMove = (e) => {
       mousePos.current.x = e.clientX;
       mousePos.current.y = e.clientY;
-      if (!visible) setVisible(true);
+      if (!visibleRef.current) {
+        visibleRef.current = true;
+        setVisible(true);
+      }
     };
 
     const onMouseLeave = () => {
+      visibleRef.current = false;
       setVisible(false);
     };
 
     const onMouseEnter = () => {
+      visibleRef.current = true;
       setVisible(true);
     };
 
@@ -113,15 +120,16 @@ export default function CustomCursor() {
         left: 0,
         width: '12px',
         height: '12px',
-        backgroundColor: '#2BA8A0',
+        backgroundColor: 'var(--color-teal, #2BA8A0)',
         borderRadius: '50%',
         pointerEvents: 'none',
         zIndex: 10000,
-        mixBlendMode: 'difference',
         display: visible ? 'block' : 'none',
-        transition: 'background-color 0.3s ease, opacity 0.3s ease',
+        transition: 'background-color 0.3s ease, transform 0.15s ease',
         transform: 'translate3d(-50%, -50%, 0)',
         willChange: 'transform',
+        border: '2px solid #ffffff',
+        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.4)',
       }}
     />
   );

@@ -2964,7 +2964,7 @@ a.gallery-item:hover .gallery-overlay {
     padding-bottom: 3.5rem !important;
   }
   .hero-bg {
-    background-image: url("/images/BANNERMOBILE1.jpg") !important;
+    background-image: url("/images/hero-mobile-sushi.png") !important;
     background-position: center center !important;
   }
   .hero-title {
@@ -3390,21 +3390,24 @@ p, .review-text, .section-subtitle, .rodizio-card-desc, .menu-item-desc {
 }
 
 /* 4. Scroll Reveal Curves */
-.reveal, .reveal-left, .reveal-right {
-  opacity: 0 !important;
-  transform: translateY(30px) !important;
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
+@media (min-width: 769px) {
+  .reveal, .reveal-left, .reveal-right {
+    opacity: 0 !important;
+    transform: translateY(30px) !important;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+  .reveal-left {
+    transform: translateX(-30px) translateY(30px) !important;
+  }
+  .reveal-right {
+    transform: translateX(30px) translateY(30px) !important;
+  }
+  .reveal.revealed, .reveal-left.revealed, .reveal-right.revealed {
+    opacity: 1 !important;
+    transform: translate(0, 0) !important;
+  }
 }
-.reveal-left {
-  transform: translateX(-30px) translateY(30px) !important;
-}
-.reveal-right {
-  transform: translateX(30px) translateY(30px) !important;
-}
-.reveal.revealed, .reveal-left.revealed, .reveal-right.revealed {
-  opacity: 1 !important;
-  transform: translate(0, 0) !important;
-}
+
 
 /* 5. Cards: luxury dark & glass gradients */
 .rodizio-card, .delivery-card, .menu-item-card, .blog-card {
