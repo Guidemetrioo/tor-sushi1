@@ -677,21 +677,40 @@ button {
 }
 
 .hero-buttons a, .hero-buttons button {
-  width: 100%;
+  width: 100% !important;
+  max-width: 280px !important;
+  height: 52px !important;
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  padding: 0 1.5rem !important;
 }
 
 @media (min-width: 640px) {
   .hero-buttons a, .hero-buttons button {
-    width: auto;
+    width: 220px !important;
+    max-width: none !important;
   }
 }
 
 .hero-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.75rem;
   justify-content: center;
-  margin-top: 1.75rem;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(10, 10, 10, 0.75) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+  width: fit-content;
+  margin-left: auto !important;
+  margin-right: auto !important;
   animation: fadeSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.9s both;
 }
 
@@ -699,15 +718,14 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.4rem 0.875rem;
-  background: rgba(22, 22, 22, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 50px;
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
+  padding: 0.3rem 0.5rem;
+  background: transparent !important;
+  border: none !important;
+  font-size: 0.75rem;
+  font-weight: 500;
   color: #FFFFFF !important;
   text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-  backdrop-filter: blur(10px);
+  backdrop-filter: none !important;
 }
 
 .hero-badge .badge-icon {
@@ -1563,7 +1581,17 @@ button {
   .reserva-grid {
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
-    align-items: start;
+    align-items: stretch !important;
+  }
+  .reserva-grid > div {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+  }
+  .reserva-cta-card,
+  .reserva-info-frame {
+    flex: 1 !important;
+    height: 100% !important;
   }
 }
 
@@ -1750,9 +1778,31 @@ button {
 }
 
 .mapa-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+  width: 100% !important;
+}
+
+@media (min-width: 768px) {
+  .mapa-buttons {
+    flex-direction: row !important;
+  }
+  .mapa-buttons a {
+    flex: 1 !important;
+  }
+}
+
+.mapa-buttons a {
+  width: 100% !important;
+  height: 50px !important;
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  font-size: 0.7rem !important;
+  padding: 0 0.5rem !important;
 }
 
 .endereco-card {
@@ -2744,17 +2794,18 @@ p {
   transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
   transform-style: preserve-3d;
 }
-
-/* Desktop hover trigger */
-@media (hover: hover) {
+/* Hover flip on desktop */
+@media (min-width: 769px) {
   .flip-container:hover .flip-inner {
     transform: rotateY(180deg);
   }
 }
 
 /* Mobile click trigger */
-.flip-inner.flipped {
-  transform: rotateY(180deg);
+@media (max-width: 768px) {
+  .flip-inner.flipped {
+    transform: rotateY(180deg);
+  }
 }
 
 /* Shared face styles */
@@ -2980,10 +3031,15 @@ a.gallery-item:hover .gallery-overlay {
   }
   .hero-badges {
     margin-top: 1.25rem !important;
-    gap: 0.35rem !important;
+    gap: 0.5rem !important;
+    border-radius: 16px !important;
+    padding: 0.6rem 1rem !important;
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
   .hero-badge {
-    padding: 0.3rem 0.65rem !important;
+    padding: 0.2rem 0.4rem !important;
     font-size: 0.65rem !important;
   }
 
@@ -3217,10 +3273,10 @@ a.gallery-item:hover .gallery-overlay {
 
   /* Reserva mobile overrides */
   .btn-expand-reserva {
-    display: inline-flex !important;
+    display: flex !important;
     align-items: center;
     justify-content: center;
-    width: auto !important;
+    width: fit-content !important;
     margin: 0 auto 2rem !important;
     padding: 14px 32px !important;
     background: #2BA8A0 !important;
@@ -3437,7 +3493,7 @@ p, .review-text, .section-subtitle, .rodizio-card-desc, .menu-item-desc {
 
 /* 6. Buttons Styling */
 .btn-primary {
-  background: #2BA8A0 !important;
+  background: linear-gradient(135deg, #031F21 0%, #0A6F72 100%) !important;
   color: #FFFFFF !important;
   border-radius: 4px !important;
   border: 1px solid transparent !important;
@@ -3449,8 +3505,8 @@ p, .review-text, .section-subtitle, .rodizio-card-desc, .menu-item-desc {
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #2BA8A0, #1A8A84) !important;
-  box-shadow: 0 0 20px rgba(43, 168, 160, 0.3) !important;
+  background: linear-gradient(135deg, #053335 0%, #0E9296 100%) !important;
+  box-shadow: 0 0 20px rgba(11, 124, 128, 0.4) !important;
   transform: translateY(-1px) !important;
 }
 
@@ -3466,28 +3522,13 @@ p, .review-text, .section-subtitle, .rodizio-card-desc, .menu-item-desc {
 }
 
 .btn-outline:hover, .btn-secondary:hover, .btn-gold:hover {
-  background: linear-gradient(135deg, #2BA8A0, #1A8A84) !important;
+  background: linear-gradient(135deg, #031F21 0%, #0A6F72 100%) !important;
   border-color: transparent !important;
   color: #FFFFFF !important;
-  box-shadow: 0 0 20px rgba(43, 168, 160, 0.3) !important;
+  box-shadow: 0 0 20px rgba(11, 124, 128, 0.3) !important;
   transform: translateY(-1px) !important;
 }
 
-/* Specific button styles */
-#hero-ver-rodizio {
-  border: 1px solid #C9A96E !important;
-  background: #1A1510 !important;
-  color: #C9A96E !important;
-  border-radius: 4px !important;
-  box-shadow: none !important;
-}
-
-#hero-ver-rodizio:hover {
-  background: linear-gradient(135deg, #2BA8A0, #1A8A84) !important;
-  border-color: transparent !important;
-  color: #FFFFFF !important;
-  box-shadow: 0 0 20px rgba(43, 168, 160, 0.3) !important;
-}
 
 /* 7. Scrolled Navbar */
 .navbar.scrolled {
@@ -3893,6 +3934,106 @@ p, .review-text, .section-subtitle, .rodizio-card-desc, .menu-item-desc {
   .hero-buttons button {
     width: 100% !important;
     justify-content: center !important;
+  }
+
+  .hero-badges {
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+    border-radius: 16px !important;
+    padding: 1rem !important;
+    max-width: 320px !important;
+  }
+}
+
+/* ============================================================
+   SINGLE CARD REVIEWS & DARK GOOGLE MAPS
+   ============================================================ */
+
+/* 1. Center Single Card Reviews */
+.reviews-carousel {
+  max-width: 750px !important;
+  margin: 0 auto !important;
+}
+
+.reviews-track {
+  display: flex !important;
+  gap: 0 !important;
+}
+
+.review-card {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 2.5rem 2rem !important;
+  transform: none !important;
+}
+
+.review-quote {
+  margin-bottom: 0.5rem !important;
+}
+
+.review-stars {
+  display: flex !important;
+  justify-content: center !important;
+  margin-bottom: 1rem !important;
+  width: 100% !important;
+}
+
+.review-text {
+  text-align: center !important;
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1.5rem !important;
+  max-width: 600px !important;
+}
+
+.review-author {
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  text-align: left !important;
+}
+
+/* 2. Dark Mode for Google Maps embed iframe */
+.mapa-container iframe {
+  filter: invert(90%) hue-rotate(180deg) contrast(110%) brightness(95%) !important;
+}
+
+/* 3. Direct Reservation Panel and Featured Menu Items */
+.reserva-cta-card,
+.reserva-info-frame {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(201, 169, 110, 0.15) !important;
+  border-radius: 8px !important;
+  padding: 2.5rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+.reserva-cta-card {
+  justify-content: center !important;
+  height: 100% !important;
+}
+
+.featured-menu-item {
+  border: 1px solid var(--color-gold) !important;
+  box-shadow: 0 8px 30px rgba(201, 169, 110, 0.12) !important;
+}
+
+@media (max-width: 768px) {
+  .reserva-cta-card,
+  .reserva-info-frame {
+    padding: 1.5rem !important;
   }
 }
 

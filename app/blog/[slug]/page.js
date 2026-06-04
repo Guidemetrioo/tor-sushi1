@@ -221,7 +221,7 @@ export default async function BlogPostPage({ params }) {
                   Venha viver essa experiência. Reserve agora pelo WhatsApp!
                 </p>
                 <a
-                  href="https://wa.me/5511919439685?text=Olá!%20Vi%20o%20blog%20e%20gostaria%20de%20fazer%20uma%20reserva."
+                  href="https://dg.dguests.com/reserva_mesa/torsushi"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary"

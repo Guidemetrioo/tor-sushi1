@@ -130,7 +130,7 @@ export default function Footer() {
                 Pedir pelo WhatsApp
               </a>
               <a
-                href="https://wa.me/5511919439685?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
+                href="https://dg.dguests.com/reserva_mesa/torsushi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-link"

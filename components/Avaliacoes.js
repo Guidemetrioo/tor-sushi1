@@ -112,7 +112,7 @@ export default function Avaliacoes() {
           <div
             className="reviews-track"
             style={{
-              transform: `translateX(calc(-${current * 100}% - ${current * 1.5}rem))`,
+              transform: `translateX(-${current * 100}%)`,
             }}
           >
             {reviews.map((review, i) => (

@@ -34,7 +34,7 @@ export default function Localizacao() {
                 href="https://www.google.com/maps/dir/?api=1&destination=-23.6576865,-46.6971468"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary"
+                className="btn-outline"
                 id="loc-google-maps"
               >
                 <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
@@ -119,7 +119,7 @@ export default function Localizacao() {
 
               <div style={{ marginTop: '1.5rem' }}>
                 <a
-                  href="https://wa.me/5511919439685?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Tor%20Sushi%20Oficial."
+                  href="https://dg.dguests.com/reserva_mesa/torsushi"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary"
