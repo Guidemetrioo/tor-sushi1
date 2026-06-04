@@ -3,8 +3,6 @@ import './themes.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
-import ColorSelector from '@/components/ColorSelector';
-import CustomCursor from '@/components/CustomCursor';
 
 export const metadata = {
   title: 'Tor Sushi Oficial | Rodízio Japonês em Santo Amaro, São Paulo',
@@ -82,13 +80,11 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className="antialiased overflow-x-hidden">
+      <body className="antialiased overflow-x-hidden tema-carbono-quente">
         <Navbar />
         {children}
         <Footer />
         <WhatsAppFloat />
-        <ColorSelector />
-        <CustomCursor />
       </body>
     </html>
   );

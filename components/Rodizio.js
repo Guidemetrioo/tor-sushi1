@@ -175,7 +175,7 @@ function FlipCard({ rod, index }) {
             width: '40px',
             height: '1px',
             background: rod.featured ? 'var(--color-red)' : 'var(--color-border)',
-            marginBottom: '1.25rem'
+            margin: '0 auto 1.25rem'
           }} />
           <h3 className="rodizio-card-name font-heading">{rod.name}</h3>
           <p className="rodizio-card-desc">{rod.desc}</p>

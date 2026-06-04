@@ -3328,12 +3328,7 @@ a.gallery-item:hover .gallery-overlay {
    PREMIUM DARK LUXURY REDESIGN OVERRIDES
    ============================================================ */
 
-/* 1. Reset / Global typography & desktop custom cursor override */
-@media (min-width: 1024px) {
-  body, a, button, input, select, textarea, [role="button"], .gallery-item, .flip-container, .menu-tab {
-    cursor: none !important;
-  }
-}
+
 
 h1, h2, h3, .font-heading {
   font-weight: 800 !important;
@@ -3738,6 +3733,167 @@ p, .review-text, .section-subtitle, .rodizio-card-desc, .menu-item-desc {
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: all var(--transition-base);
+}
+
+/* ============================================================
+   VISUAL POLISH & ALIGNMENT STANDARDIZATION
+   ============================================================ */
+
+/* 1. Standardize Card Borders and Shadows */
+.rodizio-card, 
+.flip-front,
+.flip-back, 
+.flip-back-featured, 
+.delivery-card, 
+.menu-item-card, 
+.blog-card, 
+.blog-preview-card,
+.review-card {
+  border-radius: 8px !important;
+  border: 1px solid rgba(201, 169, 110, 0.2) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+  overflow: hidden !important;
+}
+
+/* 2. Center Text inside All Cards */
+.rodizio-card,
+.flip-back-inner,
+.menu-item-info,
+.blog-card-body,
+.blog-preview-body {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Center items in flip-back lists */
+.flip-back-list {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 0 !important;
+  list-style: none !important;
+  width: 100% !important;
+}
+
+.flip-back-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* Stack and center price rows inside cards */
+.rodizio-price-row {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 0.6rem 0 !important;
+  gap: 0.25rem !important;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.1) !important;
+  width: 100% !important;
+}
+
+/* Center blog card meta */
+.blog-card-meta {
+  justify-content: center !important;
+}
+
+/* Center the read more button on blog cards */
+.blog-card-btn {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 3. Center Cards on Grid Layouts (no collapse) */
+.rodizio-grid, 
+.menu-grid, 
+.blog-grid, 
+.delivery-grid {
+  display: grid !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.flip-container,
+.delivery-card,
+.menu-item-card,
+.blog-card {
+  width: 100% !important;
+  max-width: 350px !important;
+  margin: 0 auto !important;
+}
+
+@media (min-width: 768px) {
+  .menu-item-card {
+    max-width: 270px !important;
+  }
+  .delivery-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* 4. Mobile Hero Banner Positioning & Text Distribution */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 100vh !important;
+    display: flex !important;
+    align-items: center !important; /* Centered vertically to prevent text/image overlap */
+    justify-content: center !important;
+    padding-bottom: 0 !important;
+  }
+
+  .hero-bg {
+    background-image: url("/images/hero-mobile-sushi.png") !important;
+    background-position: center 30% !important; /* Shifting the image position up/down to keep dish separate */
+  }
+
+  .hero-overlay {
+    background: linear-gradient(to top, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.6) 50%, rgba(10, 10, 10, 0.75) 100%) !important;
+  }
+
+  .hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 2rem !important;
+    margin-top: -2rem !important; /* Lift slightly to balance layout */
+  }
+
+  .hero-title {
+    font-size: 2.1rem !important;
+    margin-bottom: 1rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem !important;
+    margin-bottom: 2rem !important;
+    max-width: 320px !important;
+  }
+  
+  .hero-buttons {
+    width: 100% !important;
+    max-width: 280px !important;
+    flex-direction: column !important;
+    gap: 0.8rem !important;
+  }
+
+  .hero-buttons a, 
+  .hero-buttons button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
 }
 
 
