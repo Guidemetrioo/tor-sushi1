@@ -170,7 +170,7 @@ export const menuCategories = [
 ];
 
 // ── Flip Card ────────────────────────────────────────────────────────────────
-function FlipCard({ rod, index, isFlipped, onClick, isMobile }) {
+function FlipCard({ rod, index, isMobile }) {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const cardRef = useRef(null);
 
@@ -191,92 +191,128 @@ function FlipCard({ rod, index, isFlipped, onClick, isMobile }) {
     return () => observer.disconnect();
   }, []);
 
+  const getBackItems = (id) => {
+    switch (id) {
+      case 'executivo':
+        return [
+          'Peças quentes e frias à vontade',
+          'Camarão empanado incluso',
+          'Seg. a Sex. no almoço',
+          'Melhor custo-benefício',
+          'Ideal para o dia a dia',
+        ];
+      case 'premium':
+        return [
+          'Frutos do mar à vontade',
+          'Sobremesa inclusa',
+          'Disponível todos os dias',
+          'Maior variedade de peças',
+          'A experiência completa do Tor',
+        ];
+      case 'casal':
+        return [
+          'Frutos do mar à vontade',
+          'Sobremesa inclusa',
+          'Exclusivo para dois',
+          'Disponível no jantar e fim de semana',
+          'Perfeito para datas especiais',
+        ];
+      default:
+        return [];
+    }
+  };
+
+  const getWhatsAppUrl = (id) => {
+    let text = 'Olá! Gostaria de fazer uma reserva no Tor Sushi.';
+    if (id === 'executivo') {
+      text = 'Olá! Gostaria de reservar o Rodízio Executivo.';
+    } else if (id === 'premium') {
+      text = 'Olá! Gostaria de reservar o Rodízio Premium.';
+    } else if (id === 'casal') {
+      text = 'Olá! Gostaria de reservar o Rodízio Casal / Dupla.';
+    }
+    return `https://wa.me/5511919439685?text=${encodeURIComponent(text)}`;
+  };
+
+  const backItems = getBackItems(rod.id);
+  const whatsappUrl = getWhatsAppUrl(rod.id);
+  const delays = ['0.2s', '0.6s', '1.0s'];
+  const animationDelay = delays[index] || '0.2s';
   const reservationUrl = 'https://dg.dguests.com/reserva_mesa/torsushi';
 
   return (
-    <div
-      ref={cardRef}
-      className={`flip-container ${rod.featured ? 'featured-flip' : ''}`}
-      onClick={isMobile ? onClick : undefined}
-      style={{ cursor: 'pointer' }}
-    >
-      <div 
-        className={`flip-inner ${isMobile && isFlipped ? 'flipped' : ''} ${isIntersecting ? 'animate-hint' : ''}`}
-        style={{ animationDelay: `${0.3 + index * 0.5}s` }}
-      >
-
-        {/* ── FRENTE ── */}
-        <div className={`flip-front rodizio-card ${rod.featured ? 'featured' : ''}`}>
-          {rod.badge && <div className="rodizio-badge">{rod.badge}</div>}
-          <div style={{
-            width: '40px',
-            height: '1px',
-            background: rod.featured ? 'var(--color-red)' : 'var(--color-border)',
-            margin: '0 auto 1.25rem'
-          }} />
-          <h3 className="rodizio-card-name font-heading">{rod.name}</h3>
-          <p className="rodizio-card-desc">{rod.desc}</p>
-          <div className="rodizio-prices">
-            {rod.prices.map((price, i) => (
-              <div
-                key={i}
-                className="rodizio-price-row"
-                style={price.value === '' ? {
-                  justifyContent: 'center',
-                  borderBottom: 'none',
-                  fontWeight: 'bold',
-                  letterSpacing: '0.12em',
-                  color: 'var(--color-text-primary)',
-                  paddingTop: '0.75rem',
-                  paddingBottom: '0.25rem'
-                } : {}}
-              >
-                <span className="rodizio-price-label">{price.label}</span>
-                {price.value && <span className="rodizio-price-value">{price.value}</span>}
-              </div>
-            ))}
-          </div>
-          <a
-            href={reservationUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-            style={{ width: '100%', justifyContent: 'center', marginTop: 'auto' }}
-            id={`rodizio-reservar-${rod.id}`}
-            onClick={e => e.stopPropagation()}
-          >
-            Reservar Agora
-          </a>
-        </div>
-
-        {/* ── VERSO ── */}
-        <div className={`flip-back ${rod.featured ? 'flip-back-featured' : ''}`}>
-          <div className="flip-back-inner">
-            <div className="flip-back-icon">
-              <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ margin: '0 auto 0.5rem' }}>
-                <ellipse cx="12" cy="7" rx="8" ry="4" />
-                <path d="M4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7" />
-                <ellipse cx="12" cy="7" rx="4" ry="2" fill="currentColor" opacity="0.15" />
-                <ellipse cx="12" cy="7" rx="2" ry="1" />
-              </svg>
-            </div>
-            <h4 className="flip-back-title font-heading">
-              {isMobile ? 'Diferenciais' : 'O que está incluso'}
-            </h4>
-            <p className="flip-back-subtitle">{rod.name}</p>
-            <ul className="flip-back-list">
-              {(isMobile ? rod.diferenciais : rod.backItems).map((item, i) => (
-                <li key={i} className="flip-back-item">
-                  <span className="flip-check">✔</span>
-                  {item}
-                </li>
+    <div ref={cardRef} style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
+      <div className="flip-card">
+        <div 
+          className={`flip-card-inner ${isIntersecting ? 'flip-hint' : ''}`}
+          style={{ animationDelay }}
+        >
+          {/* ── FRENTE ── */}
+          <div className="flip-card-front rodizio-card">
+            {rod.badge && <div className="rodizio-badge">{rod.badge}</div>}
+            <div style={{
+              width: '40px',
+              height: '1px',
+              background: rod.featured ? 'var(--color-red)' : 'var(--color-border)',
+              margin: '0 auto 1.25rem'
+            }} />
+            <h3 className="rodizio-card-name font-heading">{rod.name}</h3>
+            <p className="rodizio-card-desc">{rod.desc}</p>
+            <div className="rodizio-prices">
+              {rod.prices.map((price, i) => (
+                <div
+                  key={i}
+                  className="rodizio-price-row"
+                  style={price.value === '' ? {
+                    justifyContent: 'center',
+                    borderBottom: 'none',
+                    fontWeight: 'bold',
+                    letterSpacing: '0.12em',
+                    color: 'var(--color-text-primary)',
+                    paddingTop: '0.75rem',
+                    paddingBottom: '0.25rem'
+                  } : {}}
+                >
+                  <span className="rodizio-price-label">{price.label}</span>
+                  {price.value && <span className="rodizio-price-value">{price.value}</span>}
+                </div>
               ))}
-            </ul>
+            </div>
             <a
               href={reservationUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-flip-back"
+              className="btn-primary"
+              style={{ width: '100%', justifyContent: 'center', marginTop: 'auto' }}
+              id={`rodizio-reservar-${rod.id}`}
+              onClick={e => e.stopPropagation()}
+            >
+              Reservar Agora
+            </a>
+          </div>
+
+          {/* ── VERSO ── */}
+          <div className="flip-card-back">
+            <h4 className="font-heading" style={{ fontSize: '1.3rem', marginBottom: '0.5rem', color: '#FFFFFF', textAlign: 'center', marginTop: 0 }}>
+              {rod.name}
+            </h4>
+            <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.6)', textAlign: 'center', marginBottom: '1.25rem', marginTop: 0, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+              Diferenciais
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1.5rem 0', display: 'flex', flexDirection: 'column', gap: '0.6rem', width: '100%' }}>
+              {backItems.map((item, i) => (
+                <li key={i} style={{ display: 'flex', gap: '0.5rem', alignItems: 'flex-start', fontSize: '0.85rem', color: '#FFFFFF', lineHeight: '1.4', textAlign: 'left' }}>
+                  <span style={{ color: '#3DABA5', fontWeight: 'bold', flexShrink: 0 }}>✔</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+              style={{ width: '100%', justifyContent: 'center', marginTop: 'auto', backgroundColor: '#3DABA5', color: '#0A0A0A', border: '1px solid #3DABA5' }}
               onClick={e => e.stopPropagation()}
               id={`rodizio-back-reservar-${rod.id}`}
             >
@@ -284,12 +320,9 @@ function FlipCard({ rod, index, isFlipped, onClick, isMobile }) {
             </a>
           </div>
         </div>
-
       </div>
-      <div className="flip-micro-label-mobile">
-        {isMobile 
-          ? (isFlipped ? '👆 Toque para ver a frente' : '👆 Toque para ver os diferenciais')
-          : '👆 Passe o mouse para ver o que está incluso'}
+      <div className="flip-micro-label">
+        👆 Toque para ver o que está incluso
       </div>
     </div>
   );
@@ -322,7 +355,6 @@ function LotusWatermark() {
 export default function Rodizio() {
   const router = useRouter();
   const [activeMenu, setActiveMenu] = useState('entradas_quentes');
-  const [flippedIndex, setFlippedIndex] = useState(-1);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -335,9 +367,15 @@ export default function Rodizio() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const handleCardClick = (index) => {
-    setFlippedIndex(prev => (prev === index ? -1 : index));
-  };
+  useEffect(() => {
+    const isMobileViewport = window.innerWidth <= 768;
+    if (!isMobileViewport) return;
+    document.querySelectorAll('.flip-card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+  }, []);
 
   const tabs = [
     { id: 'ver_tudo', label: 'Ver Tudo' },
@@ -379,8 +417,6 @@ export default function Rodizio() {
               key={rod.id}
               rod={rod}
               index={index}
-              isFlipped={flippedIndex === index}
-              onClick={() => handleCardClick(index)}
               isMobile={isMobile}
             />
           ))}

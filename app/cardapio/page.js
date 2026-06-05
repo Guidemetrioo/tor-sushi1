@@ -67,7 +67,7 @@ export default function CardapioCompleto() {
                   fontWeight: '600',
                   letterSpacing: '1px',
                   border: '1px solid rgba(201, 169, 110, 0.2)',
-                  borderRadius: '4px',
+                  borderRadius: '999px',
                   color: activeMenu === cat.id ? '#0A0A0A' : 'var(--color-text-primary)',
                   background: activeMenu === cat.id ? 'var(--color-gold)' : 'transparent',
                   transition: 'all var(--transition-base)',

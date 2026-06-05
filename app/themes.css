@@ -1766,3 +1766,20 @@ body.tema-cromo-preto .whatsapp-float {
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.25) !important;
 }
 
+/* Category menu tabs roundness override for all themes */
+body.tema-japandi-premium .menu-tab,
+body.tema-bege-editorial .menu-tab,
+body.tema-midnight-teal .menu-tab,
+body.tema-editorial-branco .menu-tab,
+body.tema-gold-obsidian .menu-tab,
+body.tema-bronze-antigo .menu-tab,
+body.tema-titanio-ardosia .menu-tab,
+body.tema-ouro-rose .menu-tab,
+body.tema-prata-shibori .menu-tab,
+body.tema-cromo-preto .menu-tab,
+body.tema-carbono-quente .menu-tab,
+.menu-tab {
+  border-radius: 999px !important;
+}
+
+
