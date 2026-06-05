@@ -633,7 +633,7 @@ button {
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 4.8vw, 3.6rem);
+  font-size: clamp(1.8rem, 4.2vw, 3.1rem);
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: 0.75rem;
@@ -718,14 +718,15 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.3rem 0.5rem;
-  background: transparent !important;
-  border: none !important;
+  padding: 0.35rem 0.8rem !important;
+  background: rgba(201, 169, 110, 0.15) !important;
+  border: 1px solid rgba(201, 169, 110, 0.3) !important;
+  border-radius: 50px !important;
   font-size: 0.75rem;
   font-weight: 500;
-  color: #FFFFFF !important;
+  color: #C9A96E !important;
   text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-  backdrop-filter: none !important;
+  backdrop-filter: blur(4px) !important;
 }
 
 .hero-badge .badge-icon {
@@ -932,6 +933,16 @@ button {
   line-height: 1.2;
   margin-bottom: 1rem;
   letter-spacing: -0.5px;
+}
+
+.cardapio-title {
+  white-space: nowrap !important;
+}
+
+@media (max-width: 768px) {
+  .cardapio-title {
+    font-size: clamp(1.1rem, 5vw, 1.8rem) !important;
+  }
 }
 
 .section-subtitle {
@@ -3019,8 +3030,8 @@ a.gallery-item:hover .gallery-overlay {
     background-position: center center !important;
   }
   .hero-title {
-    font-size: 2.2rem !important;
-    line-height: 1.2 !important;
+    font-size: clamp(1.3rem, 5.8vw, 2.1rem) !important;
+    line-height: 1.25 !important;
   }
   .hero-subtitle {
     font-size: 0.85rem !important;
@@ -3039,8 +3050,9 @@ a.gallery-item:hover .gallery-overlay {
     margin-right: auto !important;
   }
   .hero-badge {
-    padding: 0.2rem 0.4rem !important;
+    padding: 0.25rem 0.6rem !important;
     font-size: 0.65rem !important;
+    border-radius: 50px !important;
   }
 
   /* 3. Central Banner (Nossa História) */
@@ -3580,6 +3592,7 @@ p, .review-text, .section-subtitle, .rodizio-card-desc, .menu-item-desc {
   background: rgba(201, 169, 110, 0.15) !important;
   border: 1px solid rgba(201, 169, 110, 0.3) !important;
   color: #C9A96E !important;
+  border-radius: 50px !important;
 }
 
 /* Hero Entrance Animation */
@@ -3912,7 +3925,7 @@ p, .review-text, .section-subtitle, .rodizio-card-desc, .menu-item-desc {
   }
 
   .hero-title {
-    font-size: 2.1rem !important;
+    font-size: clamp(1.3rem, 5.8vw, 2.1rem) !important;
     margin-bottom: 1rem !important;
     line-height: 1.25 !important;
   }

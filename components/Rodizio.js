@@ -393,7 +393,7 @@ export default function Rodizio() {
         <div id="cardapio">
           <div className="section-header reveal" style={{ marginBottom: '2rem' }}>
             <span className="section-tag">Nosso Cardápio</span>
-            <h2 className="section-title font-heading">
+            <h2 className="section-title font-heading cardapio-title">
               Cada prato, uma <span className="gold-gradient">obra de arte</span>
             </h2>
           </div>

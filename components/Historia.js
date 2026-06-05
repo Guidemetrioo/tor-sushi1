@@ -12,7 +12,7 @@ export default function Historia() {
             <span className="section-tag" style={{ textAlign: 'left', display: 'block', marginBottom: '0.75rem' }}>Nossa História</span>
             <h2 className="section-title font-heading" style={{ textAlign: 'left' }}>
               Cada peça conta uma história.{' '}
-              <span className="gold-gradient">A sua começa aqui.</span>
+              <span className="gold-gradient">A sua começa&nbsp;aqui.</span>
             </h2>
 
             {/* Mobile-only Image (sits between Title and description text) */}
@@ -32,13 +32,13 @@ export default function Historia() {
             </div>
 
             <p style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)', lineHeight: 1.8, marginBottom: '1rem' }}>
-              O Tor Sushi Oficial nasceu do amor pela culinária japonesa e do desejo de oferecer uma experiência gastronômica completa e acessível para os moradores de Santo Amaro e toda a Zona Sul de São Paulo.
+              O Tor Sushi Oficial nasceu do amor pela culinária japonesa e do desejo de oferecer o rodízio com o melhor custo-benefício de São Paulo, proporcionando uma experiência gastronômica completa e de alta qualidade para os moradores de Santo Amaro e toda a Zona Sul.
             </p>
             <p style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)', lineHeight: 1.8, marginBottom: '1rem' }}>
               Com um ambiente aconchegante e climatizado, poltronas confortáveis e uma enorme variedade de pratos, nosso rodízio à vontade garante que você e seus acompanhantes saiam satisfeitos com a melhor experiência japonesa da região.
             </p>
             <p style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)', lineHeight: 1.8, marginBottom: '2rem' }}>
-              O melhor da culinária japonesa na Zona Sul de São Paulo.
+              A melhor culinária japonesa com o melhor custo-benefício de São Paulo, na Zona Sul.
             </p>
 
             {/* Stats */}

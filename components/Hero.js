@@ -18,12 +18,12 @@ export default function Hero() {
         <p className="hero-tag">Santo Amaro, São Paulo</p>
 
         <h1 className="hero-title font-heading">
-          O rodízio japonês que<br />
-          <span className="gold-gradient">conquistou a Zona Sul</span>
+          O rodízio japonês com o&nbsp;melhor<br />
+          <span className="gold-gradient">custo-benefício da&nbsp;Zona&nbsp;Sul</span>
         </h1>
 
         <p className="hero-subtitle">
-          À vontade com frutos do mar e sobremesa inclusa. Nota 4.7 no Google.
+          O rodízio com o melhor custo-benefício de São Paulo. À vontade com frutos do mar e sobremesa inclusa.
         </p>
 
         {/* Buttons */}
